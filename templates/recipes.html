@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <title>Recipes</title>
-</head>
+{% for recipes in recipes %}
+{{recipes.name}}<br>
+{{recipes.desc}}<br>
+{{recipes.instructions}}<br>
+{{recipes.ingredients}}<br>
+{% endfor %}
 
-<body>
-    {% for recipes in recipes %}
-    {{recipes.name}}<br>
-    {{recipes.desc}}<br>
-    {{recipes.instructions}}<br>
-    {{recipes.ingredients}}<br>
-    {% endfor %}
-</body>
-
-</html>
+{% endblock %}
