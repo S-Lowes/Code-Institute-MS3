@@ -1,0 +1,22 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+}
+
+/*--- Navbar ---*/
+
+.navbar {
+    background-color: #87ceeb;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand {
+    margin-right: 0;
+}
+
+.logo {
+    width: 10rem;
+}
