@@ -19,10 +19,10 @@
 
 <body>
     <header>
-        <!-- Navbar-->
+        <!-- Top Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="{{ url_for('get_recipes') }}">
                     <img src="{{ url_for('static', filename='images/yum_logo.png') }}" class="logo" alt="Logo">
                 </a>
                 <!-- Mobile Collapse -->
@@ -33,28 +33,40 @@
                 </button>
                 <!-- Navigation -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Recipe -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Start Links -->
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Recipes</a>
+                            <a class="nav-link active" aria-current="page" href="{{ url_for('get_recipes') }}">
+                                <h4>Recipes</h4>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Create</a>
+                            <a class="nav-link" href="#">
+                                <h4>Create</h4>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Recipes</a>
+                            <a class="nav-link" href="#">
+                                <h4>My Recipes</h4>
+                            </a>
                         </li>
                     </ul>
-                    <!-- Login/Registration -->
+                    <!-- End Links -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
+                            <a class="nav-link" href="#">
+                                <h4>Login</h4>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sign Out</a>
+                            <a class="nav-link" href="#">
+                                <h4>Sign Out</h4>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
+                            <a class="nav-link" href="#">
+                                <h4>Register</h4>
+                            </a>
                         </li>
                     </ul>
                 </div>
