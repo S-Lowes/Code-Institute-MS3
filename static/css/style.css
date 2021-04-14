@@ -12,7 +12,7 @@ body {
     overflow-y: scroll;
 }
 
-/*--- Navbar ---*/
+/*--- NAVBAR ---*/
 
 .logo {
     width: 15rem;
@@ -30,10 +30,25 @@ body {
 }
 
 .navbar-toggler {
-    color: #e46ca9;
     margin: 0 10px 0 0;
+}
+
+.navbar-toggler-icon {
+    width: 3em;
+    height: 3em;
 }
 
 .navbar-collapse {
     text-align: end;
 }
+
+/*-- FOOTER --*/
+footer {
+    background-color: #87ceeb;
+}
+
+.copyright {
+    background-color: #e46ca9;
+}
+
+/* COLOR --> Pink: #e46ca9  Blue: #87ceeb */

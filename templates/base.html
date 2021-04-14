@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        <!-- Top Navbar-->
+        <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url_for('get_recipes') }}">
@@ -33,8 +33,7 @@
                 </button>
                 <!-- Navigation -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Start Links -->
-                    <ul class="navbar-nav me-auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{ url_for('get_recipes') }}">
                                 <h4>Recipes</h4>
@@ -50,9 +49,6 @@
                                 <h4>My Recipes</h4>
                             </a>
                         </li>
-                    </ul>
-                    <!-- End Links -->
-                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <h4>Login</h4>
@@ -73,9 +69,25 @@
             </div>
         </nav>
     </header>
+    <!-- CONTENT -->
     {% block content %}
     {% endblock %}
-
+    <!-- FOOTER -->
+    <footer class="text-light">
+        <div class="row text-center">
+            <h5 class="text-uppercase">Footer Content</h5>
+            <p>
+                Hope you found something YUM! Check us out on instagram.
+            </p>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center p-3 copyright">
+            © 2020 Copyright:
+            <a class="text-light" href="#">Seb Lowes</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- SCRIPTS -->
     {% block scripts %}
     {% endblock %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
