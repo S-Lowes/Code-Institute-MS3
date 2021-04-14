@@ -54,7 +54,8 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration successful, Welome to YUM!")
         return redirect(url_for(
-            "my_recipes", username=session["user"]))  # redirect home
+            "my_recipes", username=session["user"]))
+        # redirect home? ^
 
     return render_template("register.html")
 
@@ -77,7 +78,8 @@ def login():
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for(
-                    "my_recipes", username=session["user"]))  # redirect home
+                    "my_recipes", username=session["user"]))
+                # redirect home? ^
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -95,12 +97,27 @@ def login():
 @ app.route("/my_recipes/<username>", methods=["GET", "POST"])
 def my_recipes(username):
     """
-    Render user recipe page - think about what we want to do with this page
+    Render user recipe page => think about what we want to do with this page
     """
     # grab the session user's username from database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("my_recipes.html", username=username)
+
+    if session["user"]:
+        return render_template("my_recipes.html", username=username)
+
+    return redirect(url_for("login"))
+
+
+@app.route("/logout")
+def logout():
+    """
+    Allow user to sign out
+    """
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.clear()
+    return redirect(url_for("login"))
 
 
 # debug = false before submission
