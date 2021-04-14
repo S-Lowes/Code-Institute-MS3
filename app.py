@@ -21,6 +21,9 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
+    """
+    Render main page
+    """
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
@@ -28,6 +31,9 @@ def get_recipes():
 # ===== REGISTER =====
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Render registration page => user can register an account
+    """
     if request.method == "POST":
         # check if username exists in database
         existing_user = mongo.db.users.find_one(
@@ -47,12 +53,18 @@ def register():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration successful, Welome to YUM!")
+        return redirect(url_for(
+            "my_recipes", username=session["user"]))  # redirect home
+
     return render_template("register.html")
 
 
 # ===== LOGIN =====
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Render login page => users can login into their account
+    """
     if request.method == "POST":
         # check if username exists in database
         existing_user = mongo.db.users.find_one(
@@ -64,6 +76,8 @@ def login():
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for(
+                    "my_recipes", username=session["user"]))  # redirect home
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -75,6 +89,18 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+# ===== MY RECIPES =====
+@ app.route("/my_recipes/<username>", methods=["GET", "POST"])
+def my_recipes(username):
+    """
+    Render user recipe page - think about what we want to do with this page
+    """
+    # grab the session user's username from database
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("my_recipes.html", username=username)
 
 
 # debug = false before submission
