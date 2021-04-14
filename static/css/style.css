@@ -5,11 +5,15 @@
 }
 
 body {
-    font-family: 'Fira Sans', sans-serif;
-    /*font-family: 'Ubuntu', sans-serif;*/
+    font-family: 'Ubuntu', sans-serif;
+    /*font-family: 'Fira Sans', sans-serif;*/
     padding: 0;
     margin: 0;
-    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fafafa;
 }
 
 /*--- NAVBAR ---*/
@@ -19,7 +23,7 @@ body {
 }
 
 .navbar {
-    background-color: #87ceeb;
+    background-color: #6ca9e4;
     padding: 0;
     margin: 0;
 }
@@ -44,11 +48,31 @@ body {
 
 /*-- FOOTER --*/
 footer {
-    background-color: #87ceeb;
+    background-color: #6ca9e4;
 }
 
 .copyright {
     background-color: #e46ca9;
 }
 
-/* COLOR --> Pink: #e46ca9  Blue: #87ceeb */
+.copyright p {
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.github {
+    text-decoration: none;
+    font-size: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #f8f9fa;
+}
+
+.github:hover {
+    transition: all 0.6s ease-in-out;
+    transform: rotate(360deg);
+    color: #a9e46c;
+}
+
+/* COLOR --> Pink: #e46ca9  Blue: #6ca9e4 Green: #a9e46c */

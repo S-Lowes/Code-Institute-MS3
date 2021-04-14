@@ -18,75 +18,88 @@
 </head>
 
 <body>
-    <header>
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url_for('get_recipes') }}">
-                    <img src="{{ url_for('static', filename='images/yum_logo.png') }}" class="logo" alt="Logo">
-                </a>
-                <!-- Mobile Collapse -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Navigation -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ url_for('get_recipes') }}">
-                                <h4>Recipes</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <h4>Create</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <h4>My Recipes</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <h4>Login</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <h4>Sign Out</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <h4>Register</h4>
-                            </a>
-                        </li>
-                    </ul>
+    <div class="container-fluid ps-0 pe-0">
+        <!-- HEADER -->
+        <header>
+            <!-- NAVBAR -->
+            <nav class="sticky-top navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{{ url_for('get_recipes') }}">
+                        <img src="{{ url_for('static', filename='images/yum_logo.png') }}" class="logo" alt="Logo">
+                    </a>
+                    <!-- Mobile Collapse -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Navigation -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ url_for('get_recipes') }}">
+                                    <h4>Recipes</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <h4>Create</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <h4>My Recipes</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <h4>Login</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <h4>Sign Out</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <h4>Register</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- CONTENT -->
+        {% block content %}
+        {% endblock %}
+        <!-- FOOTER -->
+        <footer class="text-light fixed-bottom">
+            <div class="row text-center">
+                <h5 class="text-uppercase">Hope you found something YUM!</h5>
+                <div class="">
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-pinterest-square"></i>
+                    </a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- CONTENT -->
-    {% block content %}
-    {% endblock %}
-    <!-- FOOTER -->
-    <footer class="text-light">
-        <div class="row text-center">
-            <h5 class="text-uppercase">Footer Content</h5>
-            <p>
-                Hope you found something YUM! Check us out on instagram.
-            </p>
-        </div>
-        <!-- Copyright -->
-        <div class="text-center p-3 copyright">
-            © 2020 Copyright:
-            <a class="text-light" href="#">Seb Lowes</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+            <!-- Copyright -->
+            <div class="copyright d-flex justify-content-center p-3">
+                <p>
+                    &#169; Sebastian Lowes
+                </p>
+                <a class="github fab fa-github" href="https://github.com/S-Lowes" target="_blank"></a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
     <!-- SCRIPTS -->
     {% block scripts %}
     {% endblock %}
