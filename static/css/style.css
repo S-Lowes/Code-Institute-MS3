@@ -13,7 +13,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: #fafafa;
+    background-color: #f8f9fa;
 }
 
 /*--- NAVBAR ---*/
@@ -46,9 +46,27 @@ body {
     text-align: end;
 }
 
+/*-- FORMS --*/
+.card-form {
+    margin: 2rem auto 1rem;
+}
+
 /*-- FOOTER --*/
 footer {
     background-color: #6ca9e4;
+}
+
+.farewell-message {
+    padding: 1rem;
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 3rem;
+    color: #f8f9fa;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 1rem;
 }
 
 .copyright {
@@ -63,13 +81,14 @@ footer {
 
 .github {
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: auto;
     margin-bottom: auto;
     color: #f8f9fa;
 }
 
-.github:hover {
+.github:hover,
+.social-icon:hover {
     transition: all 0.6s ease-in-out;
     transform: rotate(360deg);
     color: #a9e46c;
