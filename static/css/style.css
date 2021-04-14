@@ -16,7 +16,7 @@ body {
     background-color: #f8f9fa;
 }
 
-/*--- NAVBAR ---*/
+/*===== NAVBAR =====*/
 
 .logo {
     width: 25rem;
@@ -46,12 +46,22 @@ body {
     text-align: end;
 }
 
-/*-- FORMS --*/
+/*===== FORMS =====*/
 .card-form {
     margin: 2rem auto 1rem;
 }
 
-/*-- FOOTER --*/
+/*===== FLASH MESSAGES =====*/
+.flashes h4 {
+    line-height: 2;
+    text-align: center;
+    margin: 4rem auto;
+    background-color: #DDD;
+    font-size: 2rem;
+    width: 100%;
+}
+
+/*===== FOOTER =====*/
 footer {
     background-color: #6ca9e4;
 }

@@ -5,23 +5,33 @@
     <div class="card-body">
         <h3 class="text-center">Register</h3>
         <form method="POST" action="{{ url_for('register') }}">
-            <!-- USERNAME -->
+            <!-- ===== USERNAME ===== -->
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <i class="fas fa-user-ninja"></i>
-                <input id="username" name="username" type="text" class="form-control" required>
+                <input id="username" name="username" type="text" class="form-control" minlength="5" maxlength="15"
+                    pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Please Enter a Username..." required>
             </div>
-            <!-- PASSWORD -->
+            <small class="">
+                Your username must be 5-15 characters long and must not contain spaces or special characters.
+            </small>
+            <!-- ===== PASSWORD ===== -->
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <i class="fas fa-unlock-alt"></i>
-                <input id="password" name="password" type="password" class="form-control" required>
+                <input id="password" name="password" type="password" class="form-control" minlength="5" maxlength="15"
+                    pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Please Enter a Password..." required>
             </div>
-            <!-- REGISTER -->
-            <button type="submit" class="btn btn-outline-dark btn-floating">
-                Register
-                <i class="fas fa-sign-in-alt"></i>
-            </button>
+            <small class="">
+                Your password must be 5-15 characters long and must not contain spaces or special characters.
+            </small>
+            <!-- ===== REGISTER ===== -->
+            <div>
+                <button type="submit" class="btn btn-outline-dark btn-floating">
+                    Register
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
         </form>
     </div>
 </div>
