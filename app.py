@@ -24,7 +24,7 @@ def get_recipes():
     """
     Render main page
     """
-    recipes = mongo.db.recipes.find()
+    recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -118,6 +118,11 @@ def logout():
     flash("You have been logged out")
     session.clear()
     return redirect(url_for("login"))
+
+
+@app.route("/create_recipe")
+def create_recipe():
+    return render_template("create_recipe.html")
 
 
 # debug = false before submission
