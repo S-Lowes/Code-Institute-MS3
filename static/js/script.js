@@ -23,7 +23,9 @@ add_more_fields.onclick = function () {
 remove_fields.onclick = function () {
     var ingredient_tags = ingredient.getElementsByTagName('input');
     var measurement_tags = measurement.getElementsByTagName('input');
-    if (ingredient_tags.length > 1 && measurement_tags.length > 1) {
+    if (ingredient_tags.length == 1 && measurement_tags.length == 1) {
+
+    } else {
         ingredient.removeChild(ingredient_tags[(ingredient_tags.length) - 1]);
         measurement.removeChild(measurement_tags[(measurement_tags.length) - 1]);
     }
