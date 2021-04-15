@@ -20,9 +20,9 @@
 <body>
     <div class="container-fluid ps-0 pe-0">
         <!-- ===== HEADER ===== -->
-        <header>
+        <header class="sticky-top">
             <!-- ===== NAVBAR ===== -->
-            <nav class="sticky-top navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="{{ url_for('get_recipes') }}">
                         <img src="{{ url_for('static', filename='images/yum_logo2.png') }}" class="logo" alt="Logo">
@@ -73,6 +73,7 @@
                     </div>
                 </div>
             </nav>
+            <div class="fade_down"></div>
         </header>
         <!-- ===== FLASH MESSAGE ===== -->
         <div class="flash-message-section">
@@ -90,29 +91,32 @@
         {% block content %}
         {% endblock %}
         <!-- ===== FOOTER ===== -->
-        <footer class="text-light fixed-bottom">
-            <div class="row text-center">
-                <h5 class="text-uppercase farewell-message">Hope you found something YUM!</h5>
-                <div class="">
-                    <a href="#" target="_blank">
-                        <i class="fab fa-instagram-square social-icon"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i class="fab fa-facebook-square social-icon"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i class="fab fa-pinterest-square social-icon"></i>
-                    </a>
+
+        <footer class="fixed-bottom">
+            <div class="fade_up"></div>
+            <div class="footer text-light">
+                <div class="row text-center">
+                    <h5 class="text-uppercase farewell-message">Hope you found something YUM!</h5>
+                    <div class="">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-instagram-square social-icon"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-facebook-square social-icon"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-pinterest-square social-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- ===== Copyright ===== -->
+                <div class="copyright d-flex justify-content-center p-3">
+                    <p>
+                        &#169; Sebastian Lowes
+                    </p>
+                    <a class="github fab fa-github" href="https://github.com/S-Lowes" target="_blank"></a>
                 </div>
             </div>
-            <!-- ===== Copyright ===== -->
-            <div class="copyright d-flex justify-content-center p-3">
-                <p>
-                    &#169; Sebastian Lowes
-                </p>
-                <a class="github fab fa-github" href="https://github.com/S-Lowes" target="_blank"></a>
-            </div>
-            <!-- ===== Copyright ===== -->
         </footer>
     </div>
     <!-- ===== SCRIPTS ===== -->

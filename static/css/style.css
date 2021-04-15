@@ -11,8 +11,6 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
     background-color: #f8f9fa;
 }
 
@@ -61,8 +59,38 @@ body {
     width: 100%;
 }
 
+/*===== Recipe Cards =====*/
+
+.card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    width: 100%;
+    color: #164776;
+}
+
+.card:hover {
+    box-shadow: 0 5px 5px rgba(22, 71, 118, 0.19), 0 6px 6px rgba(22, 71, 118, 0.23);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-title {
+    font-size: 2rem;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+
 /*===== FOOTER =====*/
-footer {
+.footer {
     background-color: #6ca9e4;
 }
 
@@ -104,4 +132,17 @@ footer {
     color: #164776;
 }
 
-/* COLOR --> Pink: #e46ca9  Blue: #6ca9e4 Green: #a9e46c */
+/*===== FADE (Header & Footer) =====*/
+
+.fade_down {
+    height: 50px;
+    background-image: linear-gradient(to bottom, rgb(108, 169, 228, 1), rgb(248, 249, 250, 0));
+}
+
+.fade_up {
+    height: 50px;
+    background-color: rgb(248, 249, 250, 0) !;
+    background-image: linear-gradient(to top, rgb(108, 169, 228, 1), rgb(248, 249, 250, 0));
+}
+
+/* COLOR --> Pink: #e46ca9  Blue: #6ca9e4 */
