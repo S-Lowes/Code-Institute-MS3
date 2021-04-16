@@ -46,17 +46,17 @@ remove_ingredients.onclick = function () {
 // ===== ADD STEPS =====
 
 add_step.onclick = function () {
-    var newField = document.createElement('input');
+    var newField = document.createElement('textarea');
     newField.setAttribute('type', 'text');
     newField.setAttribute('name', 'survey_options[]');
     newField.setAttribute('class', 'form-control');
-    newField.setAttribute('placeholder', 'Step');
+    newField.setAttribute('placeholder', 'What do I do next?');
     newField.setAttribute('required', '');
     step.appendChild(newField);
 }
 
 remove_step.onclick = function () {
-    var step_tags = step.getElementsByTagName('input');
+    var step_tags = step.getElementsByTagName('textarea');
     if (step_tags.length == 1) {
 
     } else {
