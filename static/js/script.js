@@ -19,6 +19,7 @@ add_more_ingredients.onclick = function () {
     newField1.setAttribute('name', 'survey_options[]');
     newField1.setAttribute('class', 'survey_options[] form-control');
     newField1.setAttribute('placeholder', 'What ingredient?');
+    newField1.setAttribute('required', '');
     ingredient.appendChild(newField1);
 
     var newField2 = document.createElement('input');
@@ -26,6 +27,7 @@ add_more_ingredients.onclick = function () {
     newField2.setAttribute('name', 'survey_options[]');
     newField2.setAttribute('class', 'survey_options[] form-control');
     newField2.setAttribute('placeholder', 'How Much?');
+    newField2.setAttribute('required', '');
     measurement.appendChild(newField2);
 
 }
@@ -49,6 +51,7 @@ add_step.onclick = function () {
     newField.setAttribute('name', 'survey_options[]');
     newField.setAttribute('class', 'form-control');
     newField.setAttribute('placeholder', 'Step');
+    newField.setAttribute('required', '');
     step.appendChild(newField);
 }
 
