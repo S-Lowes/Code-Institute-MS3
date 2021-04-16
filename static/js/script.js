@@ -16,16 +16,18 @@ var remove_step = document.getElementById('remove_step');
 add_more_ingredients.onclick = function () {
     var newField1 = document.createElement('input');
     newField1.setAttribute('type', 'text');
-    newField1.setAttribute('name', 'survey_options[]');
-    newField1.setAttribute('class', 'survey_options[] form-control');
+    newField1.setAttribute('class', 'form-control');
+    newField1.setAttribute('name', 'ingredient_input');
+    newField1.setAttribute('id', 'ingredient_input');
     newField1.setAttribute('placeholder', 'What ingredient?');
     newField1.setAttribute('required', '');
     ingredient.appendChild(newField1);
 
     var newField2 = document.createElement('input');
     newField2.setAttribute('type', 'text');
-    newField2.setAttribute('name', 'survey_options[]');
-    newField2.setAttribute('class', 'survey_options[] form-control');
+    newField2.setAttribute('class', 'form-control');
+    newField2.setAttribute('name', 'measurement_input');
+    newField2.setAttribute('id', 'measurement_input');
     newField2.setAttribute('placeholder', 'How Much?');
     newField2.setAttribute('required', '');
     measurement.appendChild(newField2);
@@ -48,8 +50,9 @@ remove_ingredients.onclick = function () {
 add_step.onclick = function () {
     var newField = document.createElement('textarea');
     newField.setAttribute('type', 'text');
-    newField.setAttribute('name', 'survey_options[]');
     newField.setAttribute('class', 'form-control');
+    newField.setAttribute('name', 'step');
+    newField.setAttribute('id', 'steps');
     newField.setAttribute('placeholder', 'What do I do next?');
     newField.setAttribute('required', '');
     step.appendChild(newField);

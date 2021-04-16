@@ -5,12 +5,17 @@
     <div class="row">
         {% for recipes in recipes %}
         <div class="col-sm-4">
-            <div class="card">
+            <div class="card recipes-card">
                 <img src="{{recipes.image_url}}" class="card-img-top" alt="food item">
                 <div class="card-body">
                     <h5 class="card-title">{{recipes.name}}</h5>
                     <p class="card-text">
                         {{recipes.desc}}
+                    </p>
+                    <p>
+                        <em>
+                            Created by: {{recipes.created_by}}
+                        </em>
                     </p>
                 </div>
             </div>
