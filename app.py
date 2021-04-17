@@ -128,8 +128,9 @@ def create_recipe():
             "image_url": request.form.get("image_url"),
             "name": request.form.get("name"),
             "desc": request.form.get("desc"),
-            "instructions": request.form.getlist("step[]"),
-            "ingredients": request.form.getlist("ingredient[]"), 
+            "instructions": request.form.getlist("step"),
+            "ingredients": request.form.getlist("ingredient"),
+            "amount": request.form.getlist("measurement"),
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Task Successfully Added")
@@ -143,3 +144,6 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+
+
+# Python zip() for the ing and the amount before presenting to user.
