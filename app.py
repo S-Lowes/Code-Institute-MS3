@@ -128,9 +128,8 @@ def create_recipe():
             "image_url": request.form.get("image_url"),
             "name": request.form.get("name"),
             "desc": request.form.get("desc"),
-            "instructions": request.form.get("step"),
-            "ingredients": request.form.get("ingredient_input",
-                                            "measurement_input"),
+            "instructions": request.form.getlist("step[]"),
+            "ingredients": request.form.getlist("ingredient[]"), 
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Task Successfully Added")
