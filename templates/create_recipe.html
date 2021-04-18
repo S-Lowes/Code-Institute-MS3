@@ -6,7 +6,7 @@
 <div class="container card">
     <form class="row" method="POST" action="{{ url_for('create_recipe') }}">
         <!-- Ingredients & Controls -->
-        <div class="col-sm-4 p-3">
+        <div class="col-sm-6 p-3">
             <div class="row">
                 <h4>Ingredients List</h4>
                 <div class="col-6" id="ingredient">
@@ -14,10 +14,14 @@
                     <input type="text" class="form-control" name="ingredient" id="ingredient"
                         placeholder="What ingredient?" required>
                 </div>
-                <div class="col-6" id="measurement">
-                    <label for="measurement[]" class="form-label">Ammount?</label>
-                    <input type="text" class="form-control" name="measurement" id="measurement" placeholder="How Much?"
-                        required>
+                <div class="col-2" id="amount">
+                    <label for="amount" class="form-label">Amount?</label>
+                    <input type="text" class="form-control" name="amount" id="amount" placeholder="How Much?" required>
+                </div>
+                <div class="col-4" id="measurement">
+                    <label for="measurement" class="form-label">Measure?</label>
+                    <input type="text" class="form-control" name="measurement" id="measurement"
+                        placeholder="What Measure?" required>
                 </div>
                 <div class="controls">
                     <a id="add_more_ingredients" href="#"><i class="fas fa-plus"></i>Add an ingredient</a>
@@ -26,7 +30,7 @@
             </div>
         </div>
         <!-- Image, Name & Description -->
-        <div class="col-sm-8 p-3">
+        <div class="col-sm-6 p-3">
             <h4>Recipe Info</h4>
             <div class="">
                 <label for="image_url" class="form-label">Image</label>

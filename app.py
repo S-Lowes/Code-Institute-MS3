@@ -103,12 +103,16 @@ def my_recipes(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
+    recipes = list(mongo.db.recipes.find())
+
     if session["user"]:
-        return render_template("my_recipes.html", username=username)
+        return render_template(
+            "my_recipes.html", username=username, recipes=recipes)
 
     return redirect(url_for("login"))
 
 
+# ===== LOGOUT =====
 @app.route("/logout")
 def logout():
     """
@@ -120,8 +124,12 @@ def logout():
     return redirect(url_for("login"))
 
 
+# ===== CREATE RECIPE =====
 @app.route("/create_recipe", methods=["GET", "POST"])
 def create_recipe():
+    """
+    Allow user to create a recipe using a dynamic form.
+    """
     if request.method == "POST":
         recipe = {
             "created_by": session["user"],
@@ -130,13 +138,24 @@ def create_recipe():
             "desc": request.form.get("desc"),
             "instructions": request.form.getlist("step"),
             "ingredients": request.form.getlist("ingredient"),
-            "amount": request.form.getlist("measurement"),
+            "amount": request.form.getlist("amount"),
+            "measure": request.form.getlist("measurement"),
         }
         mongo.db.recipes.insert_one(recipe)
-        flash("Task Successfully Added")
+        flash("Recipe Successfully Added")
         return redirect(url_for("get_recipes"))
 
     return render_template("create_recipe.html")
+
+
+# ===== COOK =====
+@app.route("/cook")
+def cook():
+    """
+    User is presented with the chosen recipe to cook!
+    """
+
+    return render_template("cook.html")
 
 
 # debug = false before submission

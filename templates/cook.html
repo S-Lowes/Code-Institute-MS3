@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="text-center">Recipe Name</h3>
+
+<div class="container card">
+    <form class="row" method="POST" action="{{ url_for('create_recipe') }}">
+        <!-- Ingredients-->
+        <div class="col-sm-6 p-3">
+            {% for ing in ingredient_zip %}
+            {% endfor %}
+        </div>
+        <!-- Image Description -->
+        <div class="col-sm-6 p-3">
+        </div>
+        <!-- Instructions -->
+        <div class="col-12 p-3">
+            <h4>Instructions</h4>
+            {% for step in recipes.instructions %}
+            {% endfor %}
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+
+{% for recipes in recipes %}
+{% for step in recipes.instructions %}

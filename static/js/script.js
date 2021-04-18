@@ -2,6 +2,7 @@
 
 var ingredient = document.getElementById('ingredient');
 var measurement = document.getElementById('measurement');
+var amount = document.getElementById('amount');
 var add_more_ingredients = document.getElementById('add_more_ingredients');
 var remove_ingredients = document.getElementById('remove_ingredients');
 
@@ -26,21 +27,31 @@ add_more_ingredients.onclick = function () {
     var newField2 = document.createElement('input');
     newField2.setAttribute('type', 'text');
     newField2.setAttribute('class', 'form-control');
-    newField2.setAttribute('name', 'measurement');
-    newField2.setAttribute('id', 'measurement');
+    newField2.setAttribute('name', 'amount');
+    newField2.setAttribute('id', 'amount');
     newField2.setAttribute('placeholder', 'How Much?');
     newField2.setAttribute('required', '');
-    measurement.appendChild(newField2);
+    amount.appendChild(newField2);
 
+    var newField3 = document.createElement('input');
+    newField3.setAttribute('type', 'text');
+    newField3.setAttribute('class', 'form-control');
+    newField3.setAttribute('name', 'measurement');
+    newField3.setAttribute('id', 'measurement');
+    newField3.setAttribute('placeholder', 'What Measure?');
+    newField3.setAttribute('required', '');
+    measurement.appendChild(newField3);
 }
 
 remove_ingredients.onclick = function () {
     var ingredient_tags = ingredient.getElementsByTagName('input');
+    var amount_tags = amount.getElementsByTagName('input');
     var measurement_tags = measurement.getElementsByTagName('input');
-    if (ingredient_tags.length == 1 && measurement_tags.length == 1) {
+    if (ingredient_tags.length == 1 && measurement_tags.length == 1 && amount_tags.length == 1) {
 
     } else {
         ingredient.removeChild(ingredient_tags[(ingredient_tags.length) - 1]);
+        amount.removeChild(amount_tags[(amount_tags.length) - 1]);
         measurement.removeChild(measurement_tags[(measurement_tags.length) - 1]);
     }
 }
