@@ -62,18 +62,10 @@ body {
 
 /*===== Recipe Cards =====*/
 
-.recipes-card {
-    color: #f8f9fa;
-    box-sizing: border-box;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.card {
+    width: 100%;
     background-color: #f8f9fa;
-    width: 100%;
     color: #e46ca9;
-}
-
-.card img {
-    width: 100%;
 }
 
 .card-title {
@@ -82,7 +74,6 @@ body {
 
 .card-text {
     font-size: 1.25rem;
-    font-family: 'Fira Sans', sans-serif;
 }
 
 /*===== FOOTER =====*/

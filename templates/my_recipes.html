@@ -6,24 +6,14 @@
 <div class="container recipe">
     <div class="row">
         {% for recipes in recipes %}
-        {% if session.user|lower == recipes.created_by|lower %}
-        <div class="col-sm-4">
-            <div class="card">
-                <img src="{{recipes.image_url}}" class="card-img-top" alt="food item">
-                <div class="card-body">
-                    <h5 class="card-title">{{recipes.name}}</h5>
-                    <p class="card-text">
-                        {{recipes.desc}}
-                    </p>
-                    <p>
-                        <em>
-                            Created by: {{recipes.created_by}}
-                        </em>
-                    </p>
-                </div>
-            </div>
-        </div>
-        {% endif %}
+        {% include 'recipe_cards.html' %}
+        {% else %}
+        <p>
+            Fancy creating a recipe?
+        </p>
+        <a href="{{ url_for('create_recipe') }}">
+            <img src="{{ url_for('static', filename='images/create_button.png') }}" class="logo" alt="Logo">
+        </a>
         {% endfor %}
     </div>
 </div>

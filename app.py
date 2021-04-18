@@ -103,7 +103,7 @@ def my_recipes(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
 
     if session["user"]:
         return render_template(

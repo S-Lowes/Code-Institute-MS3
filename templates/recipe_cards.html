@@ -1,0 +1,31 @@
+<div class="col-sm-4">
+    <div class="card text-center">
+        <img src="{{recipes.image_url}}" class="card-img-top" alt="food item">
+        <div class="card-body">
+            <h5 class="card-title">{{recipes.name}}</h5>
+            <p class="card-text">
+                {{recipes.desc}}
+            </p>
+            <p class="text-right">
+                Created by: {{recipes.created_by}}
+            </p>
+            <a href="{{ url_for('cook', id=recipes._id) }}" class="">Cook!</a>
+            {% if recipes.created_by == session["user"] %}
+            <a href="" class="">Edit</a>
+            <a href="" class="">Delete</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!--
+    <div class="card-body">
+    <h5 class="card-title">{{recipes.name}}</h5>
+    <p class="card-text">
+        {{recipes.desc}}
+    </p>
+    <p>
+        Created by: {{recipes.created_by}}
+    </p>
+        </div>
+-->

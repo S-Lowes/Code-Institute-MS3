@@ -4,32 +4,18 @@
 <div class="container recipe">
     <div class="row">
         {% for recipes in recipes %}
-        <div class="col-sm-4">
-            <div class="card">
-                <img src="{{recipes.image_url}}" class="card-img-top" alt="food item">
-                <div class="card-body">
-                    <h5 class="card-title">{{recipes.name}}</h5>
-                    <p class="card-text">
-                        {{recipes.desc}}
-                    </p>
-                    <a href="">
-                        <img src="{{ url_for('static', filename='images/cook_button.png') }}" class="cool"
-                            alt="cook button">
-                    </a>
-                    <p>
-                        <em>
-                            Created by: {{recipes.created_by}}
-                        </em>
-                    </p>
-                </div>
-            </div>
-        </div>
+        {% include '/recipe_cards.html' %}
+        {% else %}
+        <p>
+            Seems we have had a problem finding some recipes... Or no one has created any.
+        </p>
         {% endfor %}
     </div>
 </div>
 
 <!--
 {% for recipes in recipes %}
+{{recipes._id}}<br>
 {{recipes.created_by}}<br>
 {{recipes.image_url}}<br>
 {{recipes.name}}<br>
