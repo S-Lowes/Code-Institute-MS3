@@ -7,6 +7,13 @@
     <div>
         <!-- Ingredients-->
         <div class="col-sm-6 p-3">
+            {% for x in ingredients %}
+            <p>
+                {% for y in x %}
+                {{y}}
+                {% endfor %}
+            </p>
+            {% endfor %}
         </div>
         <!-- Image Description -->
         <div class="col-sm-6 p-3">
@@ -14,10 +21,17 @@
         <!-- Instructions -->
         <div class="col-12 p-3">
             <h4>Instructions</h4>
+            {% for step in recipe.instructions %}
+            <p>
+                {{ step }}
+            </p>
+            {% else %}
+            <p>
+                No Instructions
+            </p>
+            {% endfor %}
         </div>
     </div>
 </div>
-
-{{ingredients}}
 
 {% endblock %}
