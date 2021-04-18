@@ -5,13 +5,17 @@
     <div class="row">
         {% for recipes in recipes %}
         <div class="col-sm-4">
-            <div class="card recipes-card">
+            <div class="card">
                 <img src="{{recipes.image_url}}" class="card-img-top" alt="food item">
                 <div class="card-body">
                     <h5 class="card-title">{{recipes.name}}</h5>
                     <p class="card-text">
                         {{recipes.desc}}
                     </p>
+                    <a href="">
+                        <img src="{{ url_for('static', filename='images/cook_button.png') }}" class="cool"
+                            alt="cook button">
+                    </a>
                     <p>
                         <em>
                             Created by: {{recipes.created_by}}

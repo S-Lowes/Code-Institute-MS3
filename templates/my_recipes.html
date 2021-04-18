@@ -8,7 +8,7 @@
         {% for recipes in recipes %}
         {% if session.user|lower == recipes.created_by|lower %}
         <div class="col-sm-4">
-            <div class="card recipes-card">
+            <div class="card">
                 <img src="{{recipes.image_url}}" class="card-img-top" alt="food item">
                 <div class="card-body">
                     <h5 class="card-title">{{recipes.name}}</h5>
