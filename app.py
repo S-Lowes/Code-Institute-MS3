@@ -149,13 +149,21 @@ def create_recipe():
 
 
 # ===== COOK =====
-@app.route("/cook")
-def cook():
+@app.route("/cook/<id>")
+def cook(id):
     """
     User is presented with the chosen recipe to cook!
     """
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
 
-    return render_template("cook.html")
+    i_list = recipe['ingredients']
+    a_list = recipe['amount']
+    m_list = recipe['measure']
+
+    ingredients_zip = zip(i_list, a_list, m_list)
+    ingredients = tuple(ingredients_zip)
+
+    return render_template("cook.html", recipe=recipe, ingredients=ingredients)
 
 
 # debug = false before submission
@@ -163,6 +171,3 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
-
-
-# Python zip() for the ing and the amount before presenting to user.

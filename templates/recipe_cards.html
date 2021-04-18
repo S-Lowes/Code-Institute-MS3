@@ -9,23 +9,11 @@
             <p class="text-right">
                 Created by: {{recipes.created_by}}
             </p>
-            <a href="{{ url_for('cook', id=recipes._id) }}" class="">Cook!</a>
+            <a class="" href="{{ url_for('cook', id=recipes._id) }}">Cook!</a>
             {% if recipes.created_by == session["user"] %}
-            <a href="" class="">Edit</a>
-            <a href="" class="">Delete</a>
+            <a class="" href="">Edit</a>
+            <a class="" href="">Delete</a>
             {% endif %}
         </div>
     </div>
 </div>
-
-<!--
-    <div class="card-body">
-    <h5 class="card-title">{{recipes.name}}</h5>
-    <p class="card-text">
-        {{recipes.desc}}
-    </p>
-    <p>
-        Created by: {{recipes.created_by}}
-    </p>
-        </div>
--->
