@@ -10,7 +10,7 @@
                 Created by: {{recipes.created_by}}
             </p>
             <a class="" href="{{ url_for('cook', id=recipes._id) }}">Cook!</a>
-            {% if recipes.created_by == session["user"] %}
+            {% if recipes.created_by|lower == session["user"]|lower %}
             <a class="" href="{{ url_for('edit_recipe', id=recipes._id) }}">Edit</a>
             <a class="" href="">Delete</a>
             {% endif %}

@@ -167,11 +167,25 @@ def cook(id):
 
 
 # ===== EDIT =====
-@app.route("/edit_recipe/<id>")
+@app.route("/edit_recipe/<id>", methods=["GET", "POST"])
 def edit_recipe(id):
     """
     User is able edit recipes they created.
     """
+
+    if request.method == "POST":
+        edit = {
+            "created_by": session["user"],
+            "image_url": request.form.get("image_url"),
+            "name": request.form.get("name"),
+            "desc": request.form.get("desc"),
+            "instructions": request.form.getlist("step"),
+            "ingredients": request.form.getlist("ingredient"),
+            "amount": request.form.getlist("amount"),
+            "measure": request.form.getlist("measurement"),
+        }
+        mongo.db.recipes.update({"_id": ObjectId(id)}, edit)
+        flash("Recipe Successfully Edited")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
 
