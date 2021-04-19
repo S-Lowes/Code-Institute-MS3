@@ -32,7 +32,7 @@
             {% endfor %}
         </div>
         {% if recipe.created_by == session["user"] %}
-        <a class="" href="{{ url_for('edit_recipe'), id=recipe._id) }}">Edit</a>
+        <a class="" href="{{ url_for('edit_recipe', id=recipe._id) }}">Edit</a>
         <a class="" href="">Delete</a>
         {% endif %}
     </div>

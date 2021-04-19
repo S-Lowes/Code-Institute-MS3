@@ -4,24 +4,34 @@
 <h3 class="text-center">Edit Recipe</h3>
 
 <div class="container card">
-    <form class="row" method="POST" action="{{ url_for('edit_recipe'), id=recipe._id) }}">
+    <form class="row" method="POST" action="{{ url_for('edit_recipe', id=recipe._id) }}">
         <!-- Ingredients & Controls -->
         <div class="col-sm-6 p-3">
             <div class="row">
                 <h4>Ingredients List</h4>
+                <!-- Ingredients Name -->
                 <div class="col-6" id="ingredient">
                     <label for="ingredient" class="form-label">Ingredient?</label>
+                    {% for ingredient in recipe.ingredients %}
                     <input type="text" class="form-control" name="ingredient" id="ingredient"
-                        placeholder="What ingredient?" required>
+                        placeholder="What ingredient?" value="{{ ingredient }}" required>
+                    {% endfor %}
                 </div>
+                <!-- Amount -->
                 <div class="col-2" id="amount">
                     <label for="amount" class="form-label">Amount?</label>
-                    <input type="text" class="form-control" name="amount" id="amount" placeholder="How Much?" required>
+                    {% for amount in recipe.amount %}
+                    <input type="text" class="form-control" name="amount" id="amount" placeholder="How Much?"
+                        value="{{ amount }}" required>
+                    {% endfor %}
                 </div>
+                <!-- Measure -->
                 <div class="col-4" id="measurement">
                     <label for="measurement" class="form-label">Measure?</label>
+                    {% for measure in recipe.measure %}
                     <input type="text" class="form-control" name="measurement" id="measurement"
-                        placeholder="What Measure?" required>
+                        placeholder="What Measure?" value="{{ measure }}" required>
+                    {% endfor %}
                 </div>
                 <div class="controls">
                     <a id="add_more_ingredients" href="#"><i class="fas fa-plus"></i>Add an ingredient</a>
@@ -57,8 +67,10 @@
             <div class="row">
                 <div class="" id="step">
                     <label for="step" class="form-label">Add Steps</label>
+                    {% for step in recipe.instructions %}
                     <textarea type="text" class="form-control" name="step" id="step"
-                        placeholder="How do I start this recipe?" required></textarea>
+                        placeholder="How do I start this recipe?" required>{{ step }}</textarea>
+                    {% endfor %}
                 </div>
                 <div class="controls">
                     <a id="add_step" href="#"><i class="fas fa-plus"></i>Add a step</a>
