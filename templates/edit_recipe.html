@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="text-center">Edit Recipe</h3>
+
+<div class="container card">
+    <form class="row" method="POST" action="{{ url_for('edit_recipe'), id=recipe._id) }}">
+        <!-- Ingredients & Controls -->
+        <div class="col-sm-6 p-3">
+            <div class="row">
+                <h4>Ingredients List</h4>
+                <div class="col-6" id="ingredient">
+                    <label for="ingredient" class="form-label">Ingredient?</label>
+                    <input type="text" class="form-control" name="ingredient" id="ingredient"
+                        placeholder="What ingredient?" required>
+                </div>
+                <div class="col-2" id="amount">
+                    <label for="amount" class="form-label">Amount?</label>
+                    <input type="text" class="form-control" name="amount" id="amount" placeholder="How Much?" required>
+                </div>
+                <div class="col-4" id="measurement">
+                    <label for="measurement" class="form-label">Measure?</label>
+                    <input type="text" class="form-control" name="measurement" id="measurement"
+                        placeholder="What Measure?" required>
+                </div>
+                <div class="controls">
+                    <a id="add_more_ingredients" href="#"><i class="fas fa-plus"></i>Add an ingredient</a>
+                    <a id="remove_ingredients" href="#"><i class="fas fa-minus"></i>Remove an ingredient</a>
+                </div>
+            </div>
+        </div>
+        <!-- Image, Name & Description -->
+        <div class="col-sm-6 p-3">
+            <h4>Recipe Info</h4>
+            <div class="">
+                <label for="image_url" class="form-label">Image</label>
+                <input type="url" class="form-control" id="image_url" name="image_url" minlength="5" maxlength="200"
+                    placeholder="What does your recipe look like?" required>
+                <small class="">
+                    Please use an image URL, Thank you.
+                </small>
+            </div>
+            <div class="">
+                <label for="recipe_name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="recipe_name" name="name" minlength="5" maxlength="50"
+                    placeholder="What is your recipe called?" required>
+            </div>
+            <div class="">
+                <label for="recipe_desc" class="form-label">Description</label>
+                <textarea type="text" class="form-control" id="recipe_desc" name="desc" minlength="10" maxlength="750"
+                    placeholder="Describe your recipe..." required></textarea>
+            </div>
+        </div>
+        <!-- Instructions & Controls -->
+        <div class="col-12 p-3">
+            <h4>Instructions</h4>
+            <div class="row">
+                <div class="" id="step">
+                    <label for="step" class="form-label">Add Steps</label>
+                    <textarea type="text" class="form-control" name="step" id="step"
+                        placeholder="How do I start this recipe?" required></textarea>
+                </div>
+                <div class="controls">
+                    <a id="add_step" href="#"><i class="fas fa-plus"></i>Add a step</a>
+                    <a id="remove_step" href="#"><i class="fas fa-minus"></i>Remove a step</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-outline-dark">Edit Task</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -166,6 +166,33 @@ def cook(id):
     return render_template("cook.html", recipe=recipe, ingredients=ingredients)
 
 
+# ===== EDIT =====
+@app.route("/edit_task/<id>", methods=["GET", "POST"])
+def edit_recipe(id):
+    """
+    User is able edit recipes they created.
+    """
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
+
+    if request.method == "POST":
+        recipe = {
+            "created_by": session["user"],
+            "image_url": request.form.get("image_url"),
+            "name": request.form.get("name"),
+            "desc": request.form.get("desc"),
+            "instructions": request.form.getlist("step"),
+            "ingredients": request.form.getlist("ingredient"),
+            "amount": request.form.getlist("amount"),
+            "measure": request.form.getlist("measurement"),
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Successfully Edited")
+        return redirect(url_for("get_recipes"))
+
+    return render_template("edit_task.html", recipe=recipe)
+
+
 # debug = false before submission
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
