@@ -18,6 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# ===== Error Handling =====
 @app.errorhandler(403)
 def error_page_forbidden(e):
     """
@@ -29,7 +30,7 @@ def error_page_forbidden(e):
 @app.errorhandler(404)
 def error_page_not_found(e):
     """
-    Display '404' temapltefor an page not found error
+    Display '404' temaplate for a page not found error
     """
     return render_template("404.html"), 404
 
@@ -52,8 +53,12 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# ===== SEARCH =====
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    Search
+    """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
