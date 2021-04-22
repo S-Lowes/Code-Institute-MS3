@@ -18,6 +18,30 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.errorhandler(403)
+def error_page_forbidden(e):
+    """
+    Display '403' template for a forbidden page error
+    """
+    return render_template("403.html"), 403
+
+
+@app.errorhandler(404)
+def error_page_not_found(e):
+    """
+    Display '404' temapltefor an page not found error
+    """
+    return render_template("404.html"), 404
+
+
+@app.errorhandler(500)
+def error_internal_server(e):
+    """
+    Display '500' template for an internal server error
+    """
+    return render_template("500.html"), 500
+
+
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
