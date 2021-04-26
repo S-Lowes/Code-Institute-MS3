@@ -15,32 +15,17 @@ let remove_step = document.getElementById('remove_step');
 // ===== ADD INGREDIENTS =====
 
 add_more_ingredients.onclick = function () {
-    let newField1 = document.createElement('input');
-    newField1.setAttribute('type', 'text');
-    newField1.setAttribute('class', 'form-control');
-    newField1.setAttribute('name', 'ingredient');
-    newField1.setAttribute('id', 'ingredient');
-    newField1.setAttribute('placeholder', 'What ingredient?');
-    newField1.setAttribute('required', '');
-    ingredient.appendChild(newField1);
+    let input1 = `<input type="text" class="form-control" name="ingredient"
+    id="ingredient" placeholder="What ingredient?" required="">`;
+    ingredient.insertAdjacentHTML("beforeend", input1);
 
-    let newField2 = document.createElement('input');
-    newField2.setAttribute('type', 'text');
-    newField2.setAttribute('class', 'form-control');
-    newField2.setAttribute('name', 'amount');
-    newField2.setAttribute('id', 'amount');
-    newField2.setAttribute('placeholder', 'How Much?');
-    newField2.setAttribute('required', '');
-    amount.appendChild(newField2);
+    let input2 = `<input type="text" class="form-control" name="amount"
+    id="amount" placeholder="How Much?" required="">`;
+    amount.insertAdjacentHTML("beforeend", input2);
 
-    let newField3 = document.createElement('input');
-    newField3.setAttribute('type', 'text');
-    newField3.setAttribute('class', 'form-control');
-    newField3.setAttribute('name', 'measurement');
-    newField3.setAttribute('id', 'measurement');
-    newField3.setAttribute('placeholder', 'What Measure?');
-    newField3.setAttribute('required', '');
-    measurement.appendChild(newField3);
+    let input3 = `<input type="text" class="form-control" name="measurement"
+    id="measurement" placeholder="What Measure?" required="">`;
+    measurement.insertAdjacentHTML("beforeend", input3);
 }
 
 remove_ingredients.onclick = function () {
@@ -59,14 +44,10 @@ remove_ingredients.onclick = function () {
 // ===== ADD STEPS =====
 
 add_step.onclick = function () {
-    let newField = document.createElement('textarea');
-    newField.setAttribute('type', 'text');
-    newField.setAttribute('class', 'form-control');
-    newField.setAttribute('name', 'step');
-    newField.setAttribute('id', 'step');
-    newField.setAttribute('placeholder', 'What do I do next?');
-    newField.setAttribute('required', '');
-    step.appendChild(newField);
+
+    let input4 = `<textarea type="text" class="form-control" name="step"
+    id="step" placeholder="What do I do next?" required=""></textarea>`;
+    step.insertAdjacentHTML("beforeend", input4);
 }
 
 remove_step.onclick = function () {
@@ -79,17 +60,3 @@ remove_step.onclick = function () {
 }
 
 //https://www.youtube.com/watch?v=MLBLsxcB3Dc
-
-/*
-
-let input = `<input type="text" class="form-control" name="ingredient" id="ingredient" placeholder="What ingredient?" required="">`;
-ingredient.innerHTML = input;
-
-let newField1 = document.createElement('input');
-newField1.setAttribute('type', 'text');
-newField1.setAttribute('class', 'form-control');
-newField1.setAttribute('name', 'ingredient');
-newField1.setAttribute('id', 'ingredient');
-newField1.setAttribute('placeholder', 'What ingredient?');
-newField1.setAttribute('required', '');
-*/
