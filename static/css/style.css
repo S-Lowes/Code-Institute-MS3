@@ -76,6 +76,15 @@ body {
     font-size: 1.25rem;
 }
 
+.cook-button,
+.edit-button,
+.delete-button {
+    width: 7rem;
+}
+
+/* transition: all 0.6s ease-in-out;
+    transform: rotate(360deg);
+    color: #164776; */
 /*===== FOOTER =====*/
 .footer {
     background-color: #6ca9e4;

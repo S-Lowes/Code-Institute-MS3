@@ -2,18 +2,31 @@
     <div class="card text-center">
         <img src="{{recipes.image_url}}" class="card-img-top" alt="food item">
         <div class="card-body">
-            <h5 class="card-title">{{recipes.name}}</h5>
-            <p class="card-text">
-                {{recipes.desc}}
-            </p>
-            <p class="text-right">
-                Created by: {{recipes.created_by}}
-            </p>
-            <a class="" href="{{ url_for('cook', id=recipes._id) }}">Cook!</a>
-            {% if recipes.created_by|lower == session["user"]|lower %}
-            <a class="" href="{{ url_for('edit_recipe', id=recipes._id) }}">Edit</a>
-            <a class="" href="{{ url_for('delete_recipe', id=recipes._id) }}">Delete</a>
-            {% endif %}
+            <div class="card-section">
+                <h5 class="card-title">{{recipes.name}}</h5>
+                <p class="card-text">
+                    {{recipes.desc}}
+                </p>
+                <p class="card-text">
+                    Created by: {{recipes.created_by}}
+                </p>
+            </div>
+            <div class="card-section">
+                <a href="{{ url_for('cook', id=recipes._id) }}">
+                    <img src="{{ url_for('static', filename='images/cook_button.png') }}" class="cook-button"
+                        alt="cook button">
+                </a>
+                {% if recipes.created_by|lower == session["user"]|lower %}
+                <a href="{{ url_for('edit_recipe', id=recipes._id) }}">
+                    <img src="{{ url_for('static', filename='images/edit_button.png') }}" class="edit-button"
+                        alt="edit button">
+                </a>
+                <a href="{{ url_for('delete_recipe', id=recipes._id) }}">
+                    <img src="{{ url_for('static', filename='images/delete_button.png') }}" class="delete-button"
+                        alt="delete button">
+                </a>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
