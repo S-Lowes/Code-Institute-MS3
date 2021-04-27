@@ -82,9 +82,16 @@ body {
     width: 7rem;
 }
 
-/* transition: all 0.6s ease-in-out;
-    transform: rotate(360deg);
-    color: #164776; */
+/*===== COOK =====*/
+
+.cook-image {
+    width: 25%;
+}
+
+.cook-description {
+    padding: 10px 25% 10px 25%;
+}
+
 /*===== FOOTER =====*/
 .footer {
     background-color: #6ca9e4;

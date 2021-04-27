@@ -1,12 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-center">Recipe Name</h3>
+<h3 class="text-center">{{recipe.name}}</h3>
+<p class="text-center">by <em>{{recipe.created_by}}</em></p>
 
-<div class="container card">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 p-3 text-center">
+            <img src="{{recipe.image_url}}" class="cook-image" alt="food item">
+            <p class="cook-description">{{recipe.desc}}</p>
+        </div>
+    </div>
     <div class="row">
         <!-- Ingredients-->
-        <div class="col-sm-6 p-3">
+        <div class="col-sm-4 p-3 text-center">
+            <h3>Ingredients</h3>
             {% for x in ingredients %}
             <p>
                 {% for y in x %}
@@ -15,18 +23,11 @@
             </p>
             {% endfor %}
         </div>
-        <!-- Image Description -->
-        <div class="col-sm-6 p-3">
-            <img src="{{recipe.image_url}}" class="" alt="food item">
-            <p>{{recipe.name}}</p>
-            <p>{{recipe.desc}}</p>
-            <p>{{recipe.created_by}}</p>
-        </div>
         <!-- Instructions -->
-        <div class="col-12 p-3">
+        <div class="col-8 p-3 text-center">
             <h4>Instructions</h4>
             {% for step in recipe.instructions %}
-            <p>
+            <p class="cook-description">
                 {{ step }}
             </p>
             {% else %}
@@ -35,18 +36,17 @@
             </p>
             {% endfor %}
         </div>
-        <div>
-            {% if recipe.created_by|lower == session["user"]|lower %}
-            <a class="" href="{{ url_for('edit_recipe', id=recipe._id) }}">
-                <img src="{{ url_for('static', filename='images/edit_button.png') }}" class="edit-button"
-                    alt="edit button">
-            </a>
-            <a class="" href="{{ url_for('delete_recipe', id=recipe._id) }}">
-                <img src="{{ url_for('static', filename='images/delete_button.png') }}" class="delete-button"
-                    alt="delete button">
-            </a>
-            {% endif %}
-        </div>
+    </div>
+    <div class="text-center">
+        {% if recipe.created_by|lower == session["user"]|lower %}
+        <a class="" href="{{ url_for('edit_recipe', id=recipe._id) }}">
+            <img src="{{ url_for('static', filename='images/edit_button.png') }}" class="edit-button" alt="edit button">
+        </a>
+        <a class="" href="{{ url_for('delete_recipe', id=recipe._id) }}">
+            <img src="{{ url_for('static', filename='images/delete_button.png') }}" class="delete-button"
+                alt="delete button">
+        </a>
+        {% endif %}
     </div>
 </div>
 
