@@ -225,11 +225,20 @@ def edit_recipe(id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
 
+    if session["user"] != recipe['created_by']:
+        return render_template("403.html")
+
     return render_template("edit_recipe.html", recipe=recipe)
 
 
 @app.route("/delete_recipe/<id>")
 def delete_recipe(id):
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
+
+    if session["user"] != recipe['created_by']:
+        return render_template("403.html")
+
     mongo.db.recipes.remove({"_id": ObjectId(id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))

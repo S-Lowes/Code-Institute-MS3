@@ -94,37 +94,6 @@ Testing information can be found here: [TESTING]()
 
 ## Deployment, Forking, Cloning
 
-### GitHub Pages
-
-The project was deployed to GitHub Pages using the following steps:
-
-- Log in to [GitHub](https://github.com/) and locate the GitHub Repository.
-- At the top of the Repository find the "Settings" button on the menu.
-- Scroll down the Settings page until you locate the "GitHub Pages" Section.
-- Under "Source", click the dropdown called "None" and select "Master Branch".
-- For the folder selection we selected "Root".
-- The page will automatically refresh.
-- Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
-
-### Forking the GitHub Repository
-
-By forking the GitHub Repository we make a copy of the original repository on a GitHub account to view and/or make changes without affecting the original repository by using the following steps:
-
-- Log in to [GitHub](https://github.com/) and locate the GitHub Repository.
-- At the top of the Repository just above the "Settings" button on the menu, locate the "Fork" button.
-- Click the button and now you should have a copy of the original repository in your GitHub account.
-
-### Making a Local Clone
-
-- Log in to [GitHub](https://github.com/) and locate the GitHub Repository.
-- Under the repository name, click "Clone or download".
-- To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-- Open Git Bash
-- Change the current working directory to the location that you want the cloned directory to be made.
-- Type `git clone`, and then paste the URL you copied earlier.
-
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) for a more detailed explanation of the cloning process.
-
 ### Deployment to Heroku
 
 ##### Create Application
@@ -152,6 +121,25 @@ Click on the settings tab and then click "Reveal Config Vars" and add the follow
 
 1. Click on the Deploy tab
 1. Under the "Automatic Deploy" section, select the branch from GitHub that you want to deploy the app from and then click Enable Automatic Deploys
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on a GitHub account to view and/or make changes without affecting the original repository by using the following steps:
+
+- Log in to [GitHub](https://github.com/) and locate the GitHub Repository.
+- At the top of the Repository just above the "Settings" button on the menu, locate the "Fork" button.
+- Click the button and now you should have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+- Log in to [GitHub](https://github.com/) and locate the GitHub Repository.
+- Under the repository name, click "Clone or download".
+- To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+- Open Git Bash
+- Change the current working directory to the location that you want the cloned directory to be made.
+- Type `git clone`, and then paste the URL you copied earlier.
+
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) for a more detailed explanation of the cloning process.
 
 
 ## Credits
