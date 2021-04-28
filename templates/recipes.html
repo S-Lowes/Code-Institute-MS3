@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container search-container m-3">
+<div class="container search-container">
     <form action="{{ url_for('search') }}" method="post" class="text-center">
         <div class="">
             <div class="search-input p-3">
@@ -29,6 +29,6 @@
     </div>
 </div>
 {% else %}
-<h3 class="text-center p-3">No Recipes Found!</h3>
+<h3 class="text-center p-5">No Recipes Found!</h3>
 {% endif %}
 {% endblock %}
