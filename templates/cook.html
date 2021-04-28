@@ -2,39 +2,54 @@
 {% block content %}
 
 <h3 class="text-center p-3">{{recipe.name}}</h3>
-<p class="text-center">by <em>{{recipe.created_by}}</em></p>
+<p class="text-center">By <em>{{recipe.created_by}}</em></p>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 p-3 text-center">
-            <img src="{{recipe.image_url}}" class="cook-image" alt="food item">
-            <p class="cook-description">{{recipe.desc}}</p>
+<div class="container pb-5">
+    <div class="row mx-5 px-5">
+
+        <div class="">
+            <!-- ===== IMAGE & DESCRIPTION ===== -->
+            <div class="text-center">
+                <img src="{{recipe.image_url}}" class="cook-image" alt="food item">
+                <p class="cook-description">{{recipe.desc}}</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <!-- Ingredients-->
-        <div class="col-sm-4 p-3 text-center">
-            <h3>Ingredients</h3>
-            {% for x in ingredients %}
-            <p>
-                {% for y in x %}
-                {{y}}
+        <div class="card col-md-10">
+            <!-- ===== Ingredients ===== -->
+            <div class="">
+                <h3 class="recipe-header">
+                    Ingredients
+                    <div class="decoration-line"></div>
+                </h3>
+                {% for x in ingredients %}
+                <ul>
+                    <li>
+                        {% for y in x %}
+                        {{y}}
+                        {% endfor %}
+                    </li>
+                </ul>
                 {% endfor %}
-            </p>
-            {% endfor %}
-        </div>
-        <!-- Instructions -->
-        <div class="col-8 p-3 text-center">
-            <h4>Instructions</h4>
-            {% for step in recipe.instructions %}
-            <p class="cook-description">
-                {{ step }}
-            </p>
-            {% else %}
-            <p>
-                No Instructions
-            </p>
-            {% endfor %}
+            </div>
+
+            <!-- ===== INSTRUCTIONS ===== -->
+            <div class="">
+                <h3 class="recipe-header">
+                    Instructions
+                    <div class="decoration-line"></div>
+                </h3>
+                {% for step in recipe.instructions %}
+                <ul>
+                    <li>
+                        {{ step }}
+                    </li>
+                </ul>
+                {% else %}
+                <p>
+                    No Instructions
+                </p>
+                {% endfor %}
+            </div>
         </div>
     </div>
     <div class="text-center">
@@ -51,3 +66,18 @@
 </div>
 
 {% endblock %}
+
+<!--
+
+<div class="text-center">
+    {% if recipe.created_by|lower == session["user"]|lower %}
+    <a class="" href="{{ url_for('edit_recipe', id=recipe._id) }}">
+        <img src="{{ url_for('static', filename='images/edit_button.png') }}" class="edit-button" alt="edit button">
+    </a>
+    <a class="" href="{{ url_for('delete_recipe', id=recipe._id) }}">
+        <img src="{{ url_for('static', filename='images/delete_button.png') }}" class="delete-button"
+            alt="delete button">
+    </a>
+    {% endif %}
+</div>
+-->
