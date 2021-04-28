@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if recipes|length > 0%}
+<div class="container pb-5">
+    <div class="row">
+        {% for recipes in recipes %}
+        {% include '/recipe_cards.html' %}
+        {% else %}
+        <p>
+            Seems we have had a problem finding some recipes... Or no one has created any.
+        </p>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<h3 class="text-center p-5">No Recipes Found!</h3>
+{% endif %}
+{% endblock %}

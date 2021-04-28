@@ -9,7 +9,7 @@
                 <input type="text" name="query" id="query" minlength="3" class="" required>
             </div>
             <div class="search-buttons">
-                <a href="{{ url_for('get_recipes') }}" class="btn btn-outline-dark">Reset</a>
+                <a href="{{ url_for('home_recipes') }}" class="btn btn-outline-dark">Reset</a>
                 <button type="submit" class="btn btn-outline-dark">Search</button>
             </div>
         </div>
@@ -29,6 +29,6 @@
     </div>
 </div>
 {% else %}
-<h3 class="text-center p-5">No Recipes Found!</h3>
+<h3 class="text-center p-5">No Recipes Found! Try Searching later...</h3>
 {% endif %}
 {% endblock %}

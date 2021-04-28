@@ -44,13 +44,22 @@ def error_internal_server(e):
 
 
 @app.route("/")
-@app.route("/get_recipes")
-def get_recipes():
+@app.route("/home_recipes")
+def home_recipes():
+    """
+    Render main page
+    """
+    recipes = list(mongo.db.recipes.find().sort("_id", -1).limit(2))
+    return render_template("home_recipes.html", recipes=recipes)
+
+
+@app.route("/search_recipes")
+def search_recipes():
     """
     Render main page
     """
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("search_recipes.html", recipes=recipes)
 
 
 # ===== SEARCH =====
@@ -61,7 +70,7 @@ def search():
     """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("search_recipes.html", recipes=recipes)
 
 
 # ===== REGISTER =====
@@ -179,7 +188,7 @@ def create_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("home_recipes"))
 
     return render_template("create_recipe.html")
 
@@ -241,7 +250,7 @@ def delete_recipe(id):
 
     mongo.db.recipes.remove({"_id": ObjectId(id)})
     flash("Recipe Successfully Deleted")
-    return redirect(url_for("get_recipes"))
+    return redirect(url_for("home_recipes"))
 
 
 # debug = false before submission
