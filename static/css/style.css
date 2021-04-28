@@ -59,6 +59,22 @@ h3 {
     transform: scale(1.1);
 }
 
+/*===== HOMEPAGE =====*/
+
+.homepage_logo1 {
+    width: 100px;
+}
+
+.homepage_logo2 {
+    width: 50px;
+}
+
+.homepage-description {
+    padding: 20px 15% 20px 15%;
+    font-size: 1.4rem;
+    color: #e46ca9;
+}
+
 /*===== FORMS =====*/
 .card-form {
     margin: 2rem auto 1rem;

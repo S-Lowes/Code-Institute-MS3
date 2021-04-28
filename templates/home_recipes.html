@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="text-center">
+    <img src="{{ url_for('static', filename='images/yum_logo1.png') }}" class="homepage_logo1 p-2" alt="Yum Logo">
+    <p class="homepage-description">Hi! Welcome to YUM, the free to use cook book. Search through other users creations
+        or register to create your own!
+    </p>
+    <img src="{{ url_for('static', filename='images/yum_icon.png') }}" class="homepage_logo2 p-2" alt="Yum Logo">
+</div>
+
 {% if recipes|length > 0%}
 <div class="container pb-5">
     <div class="row">

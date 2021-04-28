@@ -47,9 +47,9 @@ def error_internal_server(e):
 @app.route("/home_recipes")
 def home_recipes():
     """
-    Render main page
+    Render main page and show 3 of the most recent documents.
     """
-    recipes = list(mongo.db.recipes.find().sort("_id", -1).limit(2))
+    recipes = list(mongo.db.recipes.find().sort("_id", -1).limit(3))
     return render_template("home_recipes.html", recipes=recipes)
 
 
@@ -58,7 +58,7 @@ def search_recipes():
     """
     Render main page
     """
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort("_id", -1))
     return render_template("search_recipes.html", recipes=recipes)
 
 
