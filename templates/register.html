@@ -1,45 +1,47 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="card card-form col-8">
-    <div class="card-body">
-        <h3 class="text-center p-3">Register</h3>
-        <form method="POST" action="{{ url_for('register') }}">
-            <!-- ===== USERNAME ===== -->
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <i class="fas fa-user-ninja"></i>
-                <input id="username" name="username" type="text" class="form-control" minlength="5" maxlength="15"
-                    pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Please Enter a Username..." required>
-            </div>
-            <small>
-                Your username must be 5-15 characters long and must not contain spaces or special characters.
-            </small>
-            <!-- ===== PASSWORD ===== -->
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <i class="fas fa-unlock-alt"></i>
-                <input id="password" name="password" type="password" class="form-control" minlength="5" maxlength="15"
-                    pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Please Enter a Password..." required>
-            </div>
-            <small>
-                Your password must be 5-15 characters long and must not contain spaces or special characters.
-            </small>
-            <!-- ===== REGISTER ===== -->
-            <div>
-                <button type="submit" class="btn btn-outline-dark login-register-btn">
-                    Register
-                    <i class="fas fa-sign-in-alt"></i>
-                </button>
-            </div>
-        </form>
+<section class="form-section">
+    <div class="card card-form col-8">
+        <div class="card-body">
+            <h3 class="text-center p-3">Register</h3>
+            <form method="POST" action="{{ url_for('register') }}">
+                <!-- ===== USERNAME ===== -->
+                <div class="mb-3">
+                    <label for="username" class="form-label username-label">Username</label>
+                    <i class="fas fa-user-ninja username-label"></i>
+                    <input id="username" name="username" type="text" class="form-control" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Please Enter a Username..." required>
+                </div>
+                <small>
+                    Your username must be 5-15 characters long and must not contain spaces or special characters.
+                </small>
+                <!-- ===== PASSWORD ===== -->
+                <div class="mb-3">
+                    <label for="password" class="form-label password-label">Password</label>
+                    <i class="fas fa-unlock-alt password-label"></i>
+                    <input id="password" name="password" type="password" class="form-control" minlength="5"
+                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Please Enter a Password..." required>
+                </div>
+                <small>
+                    Your password must be 5-15 characters long and must not contain spaces or special characters.
+                </small>
+                <!-- ===== REGISTER ===== -->
+                <div>
+                    <button type="submit" class="btn btn-outline-dark login-register-btn">
+                        Register
+                        <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-<div class="d-flex justify-content-center p-3">
-    <p class="m-1 p-2 p-message">
-        Already Registered?
-    </p>
-    <a class="m-1 p-2 login-or-register" href="{{ url_for('login') }}">Login!</a>
-</div>
+    <div class="d-flex justify-content-center p-3">
+        <p class="m-1 p-2 p-message">
+            Already Registered?
+        </p>
+        <a class="m-1 p-2 login-or-register" href="{{ url_for('login') }}">Login!</a>
+    </div>
+</section>
 
 {% endblock %}

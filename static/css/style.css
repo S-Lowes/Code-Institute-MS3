@@ -203,6 +203,15 @@ a {
 }
 
 /*===== LOGIN/REGISTER & RECIPES MISSING =====*/
+.form-section {
+    min-height: 70vh;
+}
+
+.username-label,
+.password-label {
+    font-size: 2rem;
+}
+
 .p-message {
     color: #e46ca9;
     font-size: 1.2rem;
@@ -247,6 +256,7 @@ a {
 
 .copyright {
     background-color: #e46ca9;
+    padding: 1rem;
 }
 
 .copyright p {
@@ -354,6 +364,14 @@ a {
 
     .farewell-message {
         padding: 0.5rem;
+    }
+
+    .copyright {
+        padding: 2rem 0 2rem 0;
+    }
+
+    .socials {
+        padding: 2rem 0 2rem 0;
     }
 
     .copyright p {

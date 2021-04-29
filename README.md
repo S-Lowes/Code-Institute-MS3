@@ -1,8 +1,8 @@
 # MS3
 
-YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaScript, CSS, Bootstrap and HTML. It includes CRUD functionality (Create, Read, Update Delete) and is designed to be responsive across multiple devices.
+YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaScript, CSS, Bootstrap and HTML. It includes CRUD functionality (Create, Read, Update Delete) and is designed to be responsive across multiple devices. YUM allows the user to browse recipes created by other users aswell as creating their own.
 
-![Multi-Device MockUp]()
+![Multi-Device MockUp](documentation/images/multi_device_mockup.png)
 
 ## User Experience
 
