@@ -341,11 +341,11 @@ a {
 
 @media screen and (max-width:600px) {
     body {
-        margin: 0px !important;
+        margin-bottom: 0px !important;
     }
 
     .container-fluid {
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     .logo {
@@ -363,11 +363,11 @@ a {
     }
 
     .fade_down {
-        height: 25px;
+        height: 15px;
     }
 
     .fade_up {
-        height: 25px;
+        height: 15px;
     }
 
     .sticky-top {
@@ -375,7 +375,6 @@ a {
     }
 
     .fixed-bottom {
-        position: absolute !important;
-        overflow: hidden;
+        position: static !important;
     }
 }
