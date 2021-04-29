@@ -18,27 +18,39 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# ===== Error Handling =====
 @app.errorhandler(403)
 def error_page_forbidden(e):
-    """
-    Display '403' template for a forbidden page error
+    """Forbidden error handler
+
+    Render '403' template for a forbidden page error.
+
+
+    Returns:
+        403 template
     """
     return render_template("403.html"), 403
 
 
 @app.errorhandler(404)
 def error_page_not_found(e):
-    """
-    Display '404' temaplate for a page not found error
+    """Page not found error handler
+
+    Render '404' template for a page not found error.
+
+    Returns:
+        404 template
     """
     return render_template("404.html"), 404
 
 
 @app.errorhandler(500)
 def error_internal_server(e):
-    """
-    Display '500' template for an internal server error
+    """Internal server error handler
+
+    Display '500' template for an internal server error.
+
+    Returns:
+        500 template
     """
     return render_template("500.html"), 500
 
@@ -46,8 +58,12 @@ def error_internal_server(e):
 @app.route("/")
 @app.route("/home_recipes")
 def home_recipes():
-    """
-    Render main page and show 3 of the most recent documents.
+    """Homepage
+
+    Render homepage, greet user and show 3 of the most recent recipes.
+
+    Returns:
+        'home_recipe.html' with 3 of the most recent recipes
     """
     recipes = list(mongo.db.recipes.find().sort("_id", -1).limit(3))
     return render_template("home_recipes.html", recipes=recipes)
@@ -55,32 +71,44 @@ def home_recipes():
 
 @app.route("/search_recipes")
 def search_recipes():
-    """
-    Render main page
+    """Search recipes
+
+    Render Search page displaying all recipes.
+
+    Returns:
+        'search_recipes.html' with all recipes sorted
     """
     recipes = list(mongo.db.recipes.find().sort("_id", -1))
     return render_template("search_recipes.html", recipes=recipes)
 
 
-# ===== SEARCH =====
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    """
-    Search
+    """Search Functionality
+
+    Handles the search request.
+    Mongo index set up across the name, description and ingredients.
+
+    Returns:
+        'search_recipes.html' template with the search results.
     """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("search_recipes.html", recipes=recipes)
 
 
-# ===== REGISTER =====
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    """
+    """Registration
+
     Render registration page => user can register an account
+
+    Returns:
+        GET: The `register.html` file
+        POST: Redirects to users `my_recipes` page
     """
     if request.method == "POST":
-        # check if username exists in database
+        # Does username exists in database?
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -100,19 +128,22 @@ def register():
         flash("Registration successful, Welome to YUM!")
         return redirect(url_for(
             "my_recipes", username=session["user"]))
-        # redirect home? ^
 
     return render_template("register.html")
 
 
-# ===== LOGIN =====
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    """
-    Render login page => users can login into their account
+    """Login
+
+    Render login page so users can sign into their account
+
+    Returns:
+        GET: The `login.html` file
+        POST: Redirects to users `my_recipes` page
     """
     if request.method == "POST":
-        # check if username exists in database
+        # Does username exists in database?
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -124,7 +155,6 @@ def login():
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for(
                     "my_recipes", username=session["user"]))
-                # redirect home? ^
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -138,11 +168,14 @@ def login():
     return render_template("login.html")
 
 
-# ===== MY RECIPES =====
 @ app.route("/my_recipes/<username>", methods=["GET", "POST"])
 def my_recipes(username):
-    """
-    Render user recipe page => think about what we want to do with this page
+    """Profile/My Recipes
+
+    Get all the user's recipes and display them to user
+
+    Returns:
+        Renders the `pmy_recipes.html` file with the user's recipes
     """
     # grab the session user's username from database
     username = mongo.db.users.find_one(
@@ -160,10 +193,13 @@ def my_recipes(username):
 # ===== LOGOUT =====
 @app.route("/logout")
 def logout():
+    """Logout
+
+    Allow user to sign out by clearing the session
+
+    Returns:
+        Redirect to `login.html`
     """
-    Allow user to sign out
-    """
-    # remove user from session cookie
     flash("You have been logged out")
     session.clear()
     return redirect(url_for("login"))
@@ -172,8 +208,13 @@ def logout():
 # ===== CREATE RECIPE =====
 @app.route("/create_recipe", methods=["GET", "POST"])
 def create_recipe():
-    """
+    """Create Recipe
+
     Allow user to create a recipe using a dynamic form.
+
+    Returns:
+        GET: Renders the `create_recipe.html`
+        POST: Redirect to `home_recipes.html`
     """
     if request.method == "POST":
         recipe = {
@@ -196,8 +237,13 @@ def create_recipe():
 # ===== COOK =====
 @app.route("/cook/<id>")
 def cook(id):
-    """
-    User is presented with the chosen recipe to cook!
+    """View Recipe
+
+    Gets an individual recipe selected by the user based on it's ID
+    That recipe is then presented to the user
+
+    Returns:
+        Renders the `cook.html"
     """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
 
@@ -214,9 +260,18 @@ def cook(id):
 # ===== EDIT =====
 @app.route("/edit_recipe/<id>", methods=["GET", "POST"])
 def edit_recipe(id):
+    """Edit Recipe
+    User is able edit recipes they created
+    Recipe selected
+
+    Returns:
+        GET: Render `edit_recipe.html`
+        POST: Recipe Updated
     """
-    User is able edit recipes they created.
-    """
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
+
+    if session["user"] != recipe['created_by']:
+        return render_template("403.html")
 
     if request.method == "POST":
         edit = {
@@ -232,17 +287,18 @@ def edit_recipe(id):
         mongo.db.recipes.update({"_id": ObjectId(id)}, edit)
         flash("Changes Successfully Saved")
 
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
-
-    if session["user"] != recipe['created_by']:
-        return render_template("403.html")
-
     return render_template("edit_recipe.html", recipe=recipe)
 
 
-@app.route("/delete_recipe/<id>")
+@ app.route("/delete_recipe/<id>")
 def delete_recipe(id):
+    """Delete recipe
 
+    Delete the chosen recipe based on its ID
+
+    Returns:
+        Redirects user to `home_recipes`
+    """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
 
     if session["user"] != recipe['created_by']:

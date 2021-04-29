@@ -90,7 +90,7 @@ If I were taking the project further there are some features I believe would the
 
 
 ## Testing 
-Testing information can be found here: [TESTING]()
+Testing information can be found here: [TESTING](TESTING.md)
 
 ## Deployment, Forking, Cloning
 
@@ -145,6 +145,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ## Credits
 
 ### Code & Media
+
+//https://www.youtube.com/watch?v=MLBLsxcB3Dc
 
 The space to share any resources I have used to help me build this project.
 
