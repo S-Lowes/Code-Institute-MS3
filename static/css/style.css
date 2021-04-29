@@ -24,13 +24,6 @@ a {
 }
 
 /*===== NAVBAR =====*/
-.header-stick {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1020;
-}
-
 .logo {
     width: 25rem;
 }
@@ -234,13 +227,6 @@ a {
 }
 
 /*===== FOOTER =====*/
-.footer-fixed {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1030;
-}
 
 .footer {
     background-color: #6ca9e4;
@@ -360,11 +346,11 @@ a {
         height: 25px;
     }
 
-    .header-stick {
+    .sticky-top {
         position: static;
     }
 
-    .footer-fixed {
+    .fixed-bottom {
         position: static;
     }
 }
