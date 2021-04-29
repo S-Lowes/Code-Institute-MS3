@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    /*font-family: 'Fira Sans', sans-serif;*/
     padding: 0;
     margin: 0;
     height: 100%;
@@ -145,6 +144,10 @@ a {
     color: #e46ca9;
 }
 
+.card-body {
+    padding: 0 5rem 3rem 5rem;
+}
+
 .card-title {
     font-size: 1.5rem;
 }
@@ -238,7 +241,7 @@ a {
     color: #f8f9fa;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 0.5rem;
+    padding: 0 0.5rem 1rem 0.5rem;
 }
 
 .copyright {
@@ -277,4 +280,54 @@ a {
     height: 50px;
     background-color: rgb(248, 249, 250, 0) !;
     background-image: linear-gradient(to top, rgb(108, 169, 228, 1), rgb(248, 249, 250, 0));
+}
+
+/*===== Median Screen Changes =====*/
+
+@media screen and (max-width:900px) {
+    .logo {
+        width: 20rem;
+    }
+
+    .farewell-message {
+        padding: 0.5rem;
+    }
+
+    .copyright p {
+        font-size: 1.2rem;
+        padding: 0 1rem 0 1rem;
+        margin: 0;
+    }
+
+    .fade_down {
+        height: 25px;
+    }
+
+    .fade_up {
+        height: 25px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .logo {
+        width: 15rem;
+    }
+
+    .farewell-message {
+        padding: 0.5rem;
+    }
+
+    .copyright p {
+        font-size: 1.2rem;
+        padding: 0 1rem 0 1rem;
+        margin: 0;
+    }
+
+    .fade_down {
+        height: 25px;
+    }
+
+    .fade_up {
+        height: 25px;
+    }
 }

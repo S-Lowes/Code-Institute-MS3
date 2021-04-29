@@ -230,7 +230,7 @@ def edit_recipe(id):
             "measure": request.form.getlist("measurement"),
         }
         mongo.db.recipes.update({"_id": ObjectId(id)}, edit)
-        flash("Recipe Successfully Edited")
+        flash("Changes Successfully Saved")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
 
