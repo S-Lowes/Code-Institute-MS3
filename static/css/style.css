@@ -20,6 +20,10 @@ h3 {
     color: #e46ca9;
 }
 
+a {
+    text-decoration: none
+}
+
 /*===== NAVBAR =====*/
 .logo {
     width: 25rem;
@@ -61,17 +65,21 @@ h3 {
 
 /*===== HOMEPAGE =====*/
 
-.homepage_logo1 {
+.homepage-logo1 {
     width: 100px;
 }
 
-.homepage_logo2 {
+.homepage-logo2 {
     width: 50px;
 }
 
 .homepage-description {
     padding: 20px 15% 20px 15%;
     font-size: 1.4rem;
+    color: #e46ca9;
+}
+
+.homepage-header {
     color: #e46ca9;
 }
 
@@ -94,6 +102,21 @@ h3 {
 
 .login-register-btn {
     margin-top: 10px;
+}
+
+#add_more_ingredients,
+#remove_ingredients,
+#add_step,
+#remove_step {
+    color: #e46ca9;
+    padding-right: 1rem;
+}
+
+#add_more_ingredients:hover,
+#remove_ingredients:hover,
+#add_step:hover,
+#remove_step:hover {
+    color: #164776;
 }
 
 /*===== FLASH MESSAGES =====*/
@@ -136,6 +159,13 @@ h3 {
     width: 7rem;
 }
 
+.cook-button:hover,
+.edit-button:hover,
+.delete-button:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
 /*===== READ RECIPE (cook.html) =====*/
 
 .image-creator-decription img {
@@ -169,49 +199,6 @@ h3 {
     font-size: 1.2rem;
 }
 
-/*===== FOOTER =====*/
-.footer {
-    background-color: #6ca9e4;
-}
-
-.farewell-message {
-    padding: 1rem;
-}
-
-.social-icon {
-    text-decoration: none;
-    font-size: 3rem;
-    color: #f8f9fa;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 1rem;
-}
-
-.copyright {
-    background-color: #e46ca9;
-}
-
-.copyright p {
-    font-size: 1.4rem;
-    padding: 1rem;
-    margin: 1rem 0;
-}
-
-.github {
-    text-decoration: none;
-    font-size: 2rem;
-    margin-top: auto;
-    margin-bottom: auto;
-    color: #f8f9fa;
-}
-
-.github:hover,
-.social-icon:hover {
-    transition: all 0.6s ease-in-out;
-    transform: rotate(360deg);
-    color: #164776;
-}
-
 /*===== LOGIN/REGISTER & RECIPES MISSING =====*/
 .p-message {
     color: #e46ca9;
@@ -236,6 +223,49 @@ h3 {
     transform: scale(1.1);
 }
 
+/*===== FOOTER =====*/
+.footer {
+    background-color: #6ca9e4;
+}
+
+.farewell-message {
+    padding: 1rem;
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #f8f9fa;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0.5rem;
+}
+
+.copyright {
+    background-color: #e46ca9;
+}
+
+.copyright p {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.github {
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #f8f9fa;
+}
+
+.github:hover,
+.social-icon:hover {
+    transition: all 0.6s ease-in-out;
+    transform: rotate(360deg);
+    color: #164776;
+}
+
 /*===== FADE (Header & Footer) =====*/
 
 .fade_down {
@@ -248,5 +278,3 @@ h3 {
     background-color: rgb(248, 249, 250, 0) !;
     background-image: linear-gradient(to top, rgb(108, 169, 228, 1), rgb(248, 249, 250, 0));
 }
-
-/* COLOR --> Pink: #e46ca9  Blue: #6ca9e4 */

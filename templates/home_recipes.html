@@ -1,13 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="text-center">
-    <img src="{{ url_for('static', filename='images/yum_logo1.png') }}" class="homepage_logo1 p-2" alt="Yum Logo">
-    <p class="homepage-description">Hi! Welcome to YUM, the free to use cook book. Search through other users creations
-        or register to create your own!
-    </p>
-    <img src="{{ url_for('static', filename='images/yum_icon.png') }}" class="homepage_logo2 p-2" alt="Yum Logo">
-</div>
+<h4 class="text-center p-3 homepage-header">Latest Recipes</h4>
 
 {% if recipes|length > 0%}
 <div class="container pb-5">
@@ -24,4 +18,13 @@
 {% else %}
 <h3 class="text-center p-5">No Recipes Found!</h3>
 {% endif %}
+
+<div class="text-center">
+    <img src="{{ url_for('static', filename='images/yum_logo1.png') }}" class="homepage-logo1 p-2" alt="Yum Logo">
+    <p class="homepage-description">Hi! Welcome to YUM, the free to use cook book. Search through other users creations
+        or register to create your own!
+    </p>
+    <img src="{{ url_for('static', filename='images/yum_icon.png') }}" class="homepage-logo2 p-2" alt="Yum Logo">
+</div>
+
 {% endblock %}
