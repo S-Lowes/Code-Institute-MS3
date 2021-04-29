@@ -285,6 +285,30 @@ a {
 
 /*===== Median Screen Changes =====*/
 
+@media screen and (max-width:1450px) {
+    .logo {
+        width: 15rem;
+    }
+
+    .farewell-message {
+        padding: 0.5rem;
+    }
+
+    .copyright p {
+        font-size: 1.2rem;
+        padding: 0 1rem 0 1rem;
+        margin: 0;
+    }
+
+    .fade_down {
+        height: 25px;
+    }
+
+    .fade_up {
+        height: 25px;
+    }
+}
+
 @media screen and (max-width:900px) {
     .logo {
         width: 20rem;
@@ -347,10 +371,11 @@ a {
     }
 
     .sticky-top {
-        position: static;
+        position: static !important;
     }
 
     .fixed-bottom {
-        position: static;
+        position: absolute !important;
+        overflow: hidden;
     }
 }
