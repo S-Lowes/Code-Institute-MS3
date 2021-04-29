@@ -245,13 +245,19 @@ a {
     padding: 1rem;
 }
 
+
+.social-icon-div {
+    padding: 0 0.5rem 1rem 0.5rem;
+}
+
 .social-icon {
     text-decoration: none;
     font-size: 2.5rem;
     color: #f8f9fa;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 0 0.5rem 1rem 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .copyright {
