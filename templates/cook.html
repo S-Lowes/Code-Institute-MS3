@@ -21,15 +21,15 @@
                     Ingredients
                     <div class="decoration-line"></div>
                 </h3>
-                {% for x in ingredients %}
                 <ul>
+                    {% for x in ingredients %}
                     <li>
                         {% for y in x %}
                         {{y}}
                         {% endfor %}
                     </li>
+                    {% endfor %}
                 </ul>
-                {% endfor %}
             </div>
 
             <!-- ===== INSTRUCTIONS ===== -->
@@ -38,13 +38,13 @@
                     Instructions
                     <div class="decoration-line"></div>
                 </h3>
-                {% for step in recipe.instructions %}
-                <ul>
+                <ol>
+                    {% for step in recipe.instructions %}
                     <li>
                         {{ step }}
                     </li>
-                </ul>
-                {% else %}
+                    {% else %}
+                </ol>
                 <p>
                     No Instructions
                 </p>
