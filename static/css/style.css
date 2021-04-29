@@ -23,10 +23,6 @@ a {
     text-decoration: none
 }
 
-.container-fluid {
-    overflow: hidden;
-}
-
 /*===== NAVBAR =====*/
 .header-stick {
     position: sticky;
@@ -303,7 +299,6 @@ a {
 /*===== Median Screen Changes =====*/
 
 @media screen and (max-width:900px) {
-
     .logo {
         width: 20rem;
     }
@@ -336,6 +331,10 @@ a {
 @media screen and (max-width:600px) {
     body {
         margin: 0px !important;
+    }
+
+    .container-fluid {
+        overflow: hidden;
     }
 
     .logo {
