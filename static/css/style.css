@@ -23,7 +23,17 @@ a {
     text-decoration: none
 }
 
+.container-fluid {
+    overflow: hidden;
+}
+
 /*===== NAVBAR =====*/
+.header-stick {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
 .logo {
     width: 25rem;
 }
@@ -145,7 +155,7 @@ a {
 }
 
 .card-body {
-    padding: 0 5rem 3rem 5rem;
+    padding: 1rem 5rem 1rem 5rem;
 }
 
 .card-title {
@@ -227,6 +237,14 @@ a {
 }
 
 /*===== FOOTER =====*/
+.footer-fixed {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
 .footer {
     background-color: #6ca9e4;
 }
@@ -285,6 +303,7 @@ a {
 /*===== Median Screen Changes =====*/
 
 @media screen and (max-width:900px) {
+
     .logo {
         width: 20rem;
     }
@@ -306,9 +325,19 @@ a {
     .fade_up {
         height: 25px;
     }
+
+    .cook-button,
+    .edit-button,
+    .delete-button {
+        width: 3.5rem;
+    }
 }
 
 @media screen and (max-width:600px) {
+    body {
+        margin: 0px !important;
+    }
+
     .logo {
         width: 15rem;
     }
@@ -329,5 +358,13 @@ a {
 
     .fade_up {
         height: 25px;
+    }
+
+    .header-stick {
+        position: static;
+    }
+
+    .footer-fixed {
+        position: static;
     }
 }
