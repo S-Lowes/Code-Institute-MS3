@@ -123,9 +123,11 @@ a {
     line-height: 2;
     text-align: center;
     margin: 4rem auto;
-    background-color: #DDD;
-    font-size: 2rem;
-    width: 100%;
+    color: #f8f9fa;
+    background-color: #164776;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    width: 25%;
 }
 
 /*===== SEARCH =====*/
@@ -326,6 +328,10 @@ a {
 }
 
 @media screen and (max-width:900px) {
+    .flashes h4 {
+        width: 50%;
+    }
+
     .logo {
         width: 20rem;
     }
@@ -358,6 +364,10 @@ a {
 @media screen and (max-width:600px) {
     body {
         margin-bottom: 0px !important;
+    }
+
+    .flashes h4 {
+        width: 75%;
     }
 
     .container-fluid {
