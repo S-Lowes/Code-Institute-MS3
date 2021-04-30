@@ -3,10 +3,20 @@
 The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to validate the pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS. (ADD PYTHON STUFF)
 
 #### Validators
+
+##### HTML
+
+[W3C Markup Validator](https://validator.w3.org/)
+
+1. []()
+
+##### CSS, Python, Javascript
+
 -   [W3C Markup Validator](https://validator.w3.org/) - [Results]()
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](documentation/validation/css_valid.png)
 -   [JSHint](https://jshint.com/) - [Results](documentation/validation/jshint.png)
 -   [PEP8](http://pep8online.com/) - [Results](documentation/validation/pep8.png)
+
 
 #### Formatters
 
