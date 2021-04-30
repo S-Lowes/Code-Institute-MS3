@@ -8,10 +8,15 @@ The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to val
 
 [W3C Markup Validator](https://validator.w3.org/)
 
-1. []()
+1. [Homepage](documentation/html_validation/homepage.png)
+1. [Search](documentation/html_validation/search.png)
+1. [Login](documentation/html_validation/login.png)
+1. [Register](documentation/html_validation/register.png)
+1. [View Recipe (cook)](documentation/html_validation/cook.png)
+1. [Create Recipe](documentation/html_validation/create.png)
+1. [Edit Recipe](documentation/html_validation/edit.png)
 
-    if session["user"] != recipe['created_by']:
-        return render_template("403.html")
+
 
 ##### CSS, Python, Javascript
 
