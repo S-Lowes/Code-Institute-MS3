@@ -32,11 +32,11 @@ After creating extra input elements with the dynamic form the HTML validator wil
 
 ### Testing User Journey
 1. The user begins at the Homepage and is prompted to either register so they can create a recipe. 
-    - User can see the brief description of the website at the homepage. This gently guides them towards registration.
+    - User can see the brief description of the website at the homepage. This gently guides the user towards registration.
 1. Or they can take a look at 3 of the most recent recipes created by other users.
     - These are visible just below the description of the website.
 1. Upon clicking 'Register' the user can then create an account.
-    - When register navigation is clicked the user is correctly taken to the registration form.
+    - When the relevant navigation is clicked the user is correctly taken to the registration form.
 1. After making an account they are automatically logged in and taken to their recipe page.
     - This happens as intended.
     - User cannot submit invalid form inputs or those that do not meet the format expected.
@@ -47,13 +47,13 @@ After creating extra input elements with the dynamic form the HTML validator wil
 1. This brings them to the creation page. This Dynamic form allows the user to add ingredients and instructions dynamically.
     - Dynamic form works as intended.
 1. Once the recipe is created it will appear in their 'My Recipes' tab.
-    - Upon creation of the recipe we can see it on the homepage and in my recipe tab. This works are intended.
+    - Upon creation of a recipe we can see it on the homepage and in my recipe tab. This works are intended.
 1. They can edit and delete any recipe that they make.
     - Editing works as intended.
-    - Deleting also works.
+    - Deleting also works as intended.
 1. Searching for a recipe.
     - Upon clicking 'search recipe' in the navbar the user is taken to the search page correctly.
-    - Searching for an ingredient such as 'salt' or a name of an recipe such as 'luganica' works as intended.
+    - Searching for an ingredient such as 'salt' or a name of a recipe such as 'luganica' works as intended.
 
 * Testuser was created to explore the users journey.
 * Testuser created the recipe 'Testing User Journey.'
@@ -71,7 +71,7 @@ After creating extra input elements with the dynamic form the HTML validator wil
         1. The most recent recipes are displayed to the user.
         1. The user can also search for recipes or browse all recipes by clicking or 'Search Recipes' in navbar.
     - I would also consider making an account.
-        1. Easily achieved by clicking on register in the navbar.
+        1. Easily achieved by clicking on 'Register' in the navbar.
 - Returning Visitor
     - As a returning visitor I may be searching for the same recipe.
         1. This can be achieved by searching for the name of that recipe.
@@ -84,7 +84,7 @@ After creating extra input elements with the dynamic form the HTML validator wil
         1. This can be done through the navbar and filling in the dynamic form.
         1. The users multiple recipes can be found in 'My Recipes' Tab.
     - I may also be searching through other users recipes to find inspiration or a recipe to cook.
-        1. This is lacking, but the search functionality will help as well as all the users recipes being displayed also.
+        1. This is lacking, but the search functionality will help as well as all other users recipes being displayed.
 
 ## Responsive Website View
 
@@ -119,18 +119,18 @@ After creating extra input elements with the dynamic form the HTML validator wil
     - All CRUD functionality is available.
     - Dynamic form is indeed dynamic and input field can be added or taken away.
 1. Contrasting with the desktop view:
-    - The header and footer are now static. This is because they obstructed the mobile view far too much.
+    - The header and footer are now static. This is because they obstructed the mobile view too much.
     - Recipe cards now stack so they can fit onto the screen.
 
 ## Different Browser Tests
 
 ### [Mozilla Firefox](https://www.mozilla.org/en-GB/firefox/new/)
 
-All the tests and development have been conducted on Firefox. Bugfixes would have been conducted using the browser dev tools.
+All the tests and development have been conducted on Firefox. Bugfixes would have been conducted using the browser development tools.
 
 ### [Google Chrome](https://www.google.co.uk/chrome/)
 
-The forms works and UI appears as designed.
+The forms works and UI appear as designed.
 
 ### [Safari](https://www.apple.com/uk/safari/)
 
@@ -148,7 +148,7 @@ The forms works and UI appears as designed.
 
 **Bug**: Validation of HTML caused an error with shared ID across HTML elements.
 
-**Bugfix**: This was fixed via some small edits to Javascript and HTML. (Although issue still would appear when creating multiple form elelements via the dynamic form)
+**Bugfix**: This was fixed via some small edits to Javascript and HTML. (Although issue still would appear when creating multiple form elements from the dynamic form)
 
 **Bug**: Jinja loop caused a validation error.
 
@@ -156,7 +156,7 @@ The forms works and UI appears as designed.
 
 **Bug**: 403 error form was not displaying.
 
-**Bugfix**: This was simply because I had not added a check as to whether or not the user trying to delete or edit a recipe (using the url and id) was the user that created it. This was resolved by adding a check for the session user in the relevant Python functions and then rendering the error page.
+**Bugfix**: This was because I had not added soem sort of validation check as to whether or not the user trying to delete or edit a recipe (using the url and id) was the user that created it. This was resolved by adding a check for the session user in the relevant Python functions and then rendering the error page.
 
 **Bug**: Could not edit ingredients as they were not appearing.
 

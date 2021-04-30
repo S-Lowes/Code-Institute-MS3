@@ -6,7 +6,7 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 
 ## User Experience
 
-### User Journey
+### New User Journey
 
 1. The user begins at the Homepage and is prompted to either register so they can create a recipe. 
 1. Or they can take a look at 3 of the most recent recipes created by other users.
@@ -23,14 +23,14 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 
 ![MyRecipes](documentation/user_journey/uj_myrecipes.png)
 
-1. If the user then decides to create a recipe they can click the create recipe tab in the navbar or the button on myrecipes.
+1. If the user then decides to create a recipe they can click the create recipe tab in the navbar or the button on 'My Recipes'.
 1. This brings them to the creation page. This Dynamic form allows the user to add ingredients and instructions dynamically.
 1. Once the recipe is created it will appear in their 'My Recipes' tab.
 1. They can edit and delete any recipe that they make.
 
 ![Creation](documentation/user_journey/uj_create.png)
 
-1. If the user wishes to either search for their own recipe or for something another user has created they can do so from the search page. This is reached by clicking 'Search Recipes' in the navbar.
+1. If the user wishes to either search for their own recipe or for one created by another user, they can do so from the search page. This is reached by clicking 'Search Recipes' in the navbar.
 
 ![Search](documentation/user_journey/uj_search.png)
 
@@ -42,7 +42,7 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
     - I would also consider making an account.
 - Returning Visitor
     - As a returning visitor I may be searching for the same recipe.
-    - I have returned to register an account so that I can make create a recipe.
+    - I have returned to register an account so that I can create a recipe.
     - I may be logging in to create my own recipe.
 - Frequent User
     - As a frequent user I would be looking to create multiple recipes.
@@ -51,7 +51,7 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 ### Design
 
 - Colour Scheme
-    - I decided to take inspiration from 'Narutomaki' which is a topping used on ramen. This led me towards a pink and white color scheme. I opted to also use a blue as it was one of the triadic colours from the pink I had sampled from a picture of narutomaki.
+    - I decided to take inspiration from 'Narutomaki' which is a topping used on ramen. This led me towards a pink and white color scheme. I opted to also use a blue as it was one of the triadic colours from the pink I had sampled.
 - Typography
     - I used Ubuntu and Fira Sans. These were chosen due to their softness which complimented the logo.
 - Imagery
@@ -70,18 +70,18 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 - The website allows the user to find and read recipes created by themselves or by other users.
 - The website is responsive across different devices.
 - Navigation bar is responsive and condenses into a icon on smaller devices.
-- User's recipes act in a similar way to a hero image in enticing users to the website.
+- User's recipes act in a similar way to a hero image in enticing new users to the website.
 - It is easy to create recipes via the dynamic form.
 - The same form is used to edit the recipes making this very simple.
 - Footer contains links to social media websites that open in a new tab.
-- Registration is simple and the acceptable formats for password and username is explained.
+- Registration is simple and the acceptable formats for a username and password are explained.
 - Confirmation messages appear after completing actions such as registering, logging in, editing & creating a recipe.
 
 ## Data Schema
 
 ![Data Scheme](documentation/images/db_diagram.png)
 
-MongoDB was used to host the database. Ingredients, Amount and Measure were originally going to kept in the same array. However, after speaking with tutor support I was persuaded away from this. I combine these arrays with pythons Zip function and then display this within cook.html. I opted to use an image URL after receiving an email from Student Care suggesting I do so.
+MongoDB was used to host the database. Ingredients, Amount and Measure were originally going to be kept in the same array. However, after speaking with tutor support I was persuaded away from this. I combine these arrays with pythons Zip function and then display this within cook.html. I opted to use an image URL after receiving an email from Student Care suggesting I do so.
 
 ## Taking The Project Further (Additional Features)
 
