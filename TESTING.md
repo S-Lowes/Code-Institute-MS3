@@ -31,7 +31,7 @@ After creating extra input elements with the dynamic form the HTML validator wil
 - [JS Formatter](https://beautifier.io/)
 
 ### Testing User Journey
-1. The user begins at the Homepage and is prompted to either register so they can create a recipe. 
+1. The user begins at the Homepage and is prompted to register so they can create a recipe. 
     - User can see the brief description of the website at the homepage. This gently guides the user towards registration.
 1. Or they can take a look at 3 of the most recent recipes created by other users.
     - These are visible just below the description of the website.
@@ -156,7 +156,7 @@ The forms works and UI appears as designed.
 
 **Bug**: 403 error form was not displaying.
 
-**Bugfix**: This was because I had not added soem sort of validation check as to whether or not the user trying to delete or edit a recipe (using the url and id) was the user that created it. This was resolved by adding a check for the session user in the relevant Python functions and then rendering the error page.
+**Bugfix**: This was because I had not added a validation check as to whether or not the user trying to delete or edit a recipe (using the url and id) was the user that created it. This was resolved by adding a check for the session user in the relevant Python functions and then rendering the error page.
 
 **Bug**: Could not edit ingredients as they were not appearing.
 
