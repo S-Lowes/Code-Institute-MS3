@@ -20,7 +20,6 @@ The W3C Markup Validator, W3C CSS Validator, JSHint and PEP8Online services were
 
 ##### CSS, Python, Javascript
 
--   [W3C Markup Validator](https://validator.w3.org/) - [Results]()
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](documentation/validation/css_valid.png)
 -   [JSHint](https://jshint.com/) - [Results](documentation/validation/jshint.png)
 -   [PEP8](http://pep8online.com/) - [Results](documentation/validation/pep8.png)
