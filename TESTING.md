@@ -58,7 +58,7 @@ After creating extra input elements with the dynamic form the HTML validator wil
 * Testuser was created to explore the users journey.
 * Testuser created the recipe 'Testing User Journey.'
 * Testuser edited this same recipe changing the image via a new url.
-* Testuser edited further by adding a new ingredient and step.
+* Testuser edited further by adding a new ingredient and step to this test recipe.
 * Testuser created and deleted a different recipe.
 
 ### Testing User Stories
@@ -157,6 +157,10 @@ The forms works and UI appears as designed.
 **Bug**: 403 error form was not displaying.
 
 **Bugfix**: This was simply because I had not added a check as to whether or not the user trying to delete or edit a recipe (using the url and id) was the user that created it. This was resolved by adding a check for the session user in the relevant Python functions and then rendering the error page.
+
+**Bug**: Could not edit ingredients as they were not appearing.
+
+**Bugfix**: I had missed deleting an 's' on the end of a name of an input.
 
 ## Further Testing:
 
