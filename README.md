@@ -136,6 +136,7 @@ Due to the nature of this project it feels like I could endlessly continue addin
 
 1. [Adobe Spark](https://spark.adobe.com/sp)
 
+1. [DBDiagram](https://dbdiagram.io/home)
 
 ## Testing 
 Testing information can be found here: [TESTING](TESTING.md)
@@ -195,10 +196,19 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code & Media
 
-//https://www.youtube.com/watch?v=MLBLsxcB3Dc
-
 The space to share any resources I have used to help me build this project.
+
+1. [Tempalate Literals](https://medium.com/@tforward/get-html-to-the-dom-fast-with-js-template-literals-insertadjacenthtml-24b8aa4e8807)
+
+1. [Python Docstrings](https://stackabuse.com/python-docstrings/)
+
+1. [Flask Error Handling](https://www.askpython.com/python-modules/flask/flask-error-handling)
+
+1. [Abdul Basit - Dynamic Forms](https://www.youtube.com/watch?v=MLBLsxcB3Dc)
+
+1. [Zip](https://www.w3schools.com/python/ref_func_zip.asp)
 
 ### Acknowledgements
 
-- My Mentor Aaron Sinnott for the helpful feedback.
+- My mentor Aaron Sinnott for the helpful feedback.
+- Tim from tutor support for mentioning Zip to me.
