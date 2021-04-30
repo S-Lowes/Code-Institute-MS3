@@ -8,44 +8,55 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 
 ### User Journey
 
-1. 
+1. The user begins at the Homepage and is prompted to either register so they can create a recipe. 
+1. Or they can take a look at 3 of the most recent recipes created by other users.
 
-![]()
+![Homepage](documentation/user_journey/uj_homepage.png)
 
-1. 
+1. Upon clicking 'Register' the user can then create an account.
 
-![]()
+![Register](documentation/user_journey/uj_register.png)
 
-1. 
+1. After making an account they are automatically logged in and taken to their recipe page.
+1. If they already have recipes then those will displayed.
+1. If not, then the user is prompted to create a recipe.
 
-![]()
+![MyRecipes](documentation/user_journey/uj_myrecipes.png)
 
-1. 
+1. If the user then decides to create a recipe they can click the create recipe tab in the navbar.
+1. This brings them to the creation page. This Dynamic form allows the user to add ingredients and instructions dynamically.
+1. Once the recipe is created it will appear in their 'My Recipes' tab.
+1. They can edit and delete any recipe that they make.
 
-![]()
+![Creation](documentation/user_journey/uj_create.png)
+
+1. If the user wishes to either search for their own recipe or for something another user has created they can do so from the search page. This is reached by clicking 'Search Recipes' in the navbar.
+
+![Search](documentation/user_journey/uj_search.png)
 
 ### User Stories
 
 - First Time Visitor
     - When I visit this site I want to understand how I can interact with the website.
-    - I would want to find a recipe to cook.
-    - I would also consider registering an account.
+    - I want to find a recipe to cook.
+    - I would also consider making an account.
 - Returning Visitor
     - As a returning visitor I may be searching for the same recipe.
-    - I may also now decide to register so that I can create my own recipes.
+    - I have returned to register an account so that I can make create a recipe.
+    - I may be logging in to create my own recipe.
+    - I just want to cook the meal I prepared last time I visited.
 - Frequent User
     - As a frequent user I would be looking to create multiple recipes.
-    - I may also be searching through other users recipes.
+    - I may also be searching through other users recipes to find inspiration or a recipe to cook.
 
 ### Design
 
 - Colour Scheme
-    - I decided to take inspiration from 'Narutomaki' which is a topping used on ramen. This led me towards a pink and white color scheme. I chose to use blue as it was one of the triadic colours from the pink I had sampled from a picture of narutomaki.
+    - I decided to take inspiration from 'Narutomaki' which is a topping used on ramen. This led me towards a pink and white color scheme. I opted to also use a blue as it was one of the triadic colours from the pink I had sampled from a picture of narutomaki.
 - Typography
-    - Talk About Font
+    - I used Ubuntu and Fira Sans. These were chosen due to their softness which complimented the logo.
 - Imagery
-    - In keeping with the Narutomaki theme I used this in the logo and intend to use it for some of the buttons within the website.
-
+    - In keeping with the Narutomaki theme I used this in the logo and some icons. The images present on the website are those provided only by the users.
 - Wireframes
     - I created wireframes for the basic ideas I had and then added more details as I went along.
         - []()

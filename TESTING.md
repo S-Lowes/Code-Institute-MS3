@@ -1,6 +1,6 @@
 # Testing
 
-The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to validate the pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS. (ADD PYTHON STUFF)
+The W3C Markup Validator, W3C CSS Validator, JSHint and PEP8Online services were used to validate the pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS.
 
 #### Validators
 
