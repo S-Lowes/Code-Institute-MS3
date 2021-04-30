@@ -13,13 +13,13 @@
                 <div class="col-6" id="ingredients">
                     <label for="ingredient" class="form-label">Ingredient?</label>
                     {% for ingredient in recipe.ingredients %}
-                    <input type="text" class="form-control" name="ingredient" id="ingredient"
+                    <input type="text" class="form-control" name="ingredients" id="ingredient"
                         placeholder="What ingredient?" value="{{ ingredient }}" required>
                     {% endfor %}
                 </div>
                 <!-- Amount -->
                 <div class="col-2" id="amounts">
-                    <label for="amounts" class="form-label">Amount?</label>
+                    <label for="amount" class="form-label">Amount?</label>
                     {% for amount in recipe.amount %}
                     <input type="text" class="form-control" name="amount" id="amount" placeholder="How Much?"
                         value="{{ amount }}" required>
@@ -27,7 +27,7 @@
                 </div>
                 <!-- Measure -->
                 <div class="col-4" id="measurements">
-                    <label for="measurements" class="form-label">Measure?</label>
+                    <label for="measurement" class="form-label">Measure?</label>
                     {% for measure in recipe.measure %}
                     <input type="text" class="form-control" name="measurement" id="measurement"
                         placeholder="What Measure?" value="{{ measure }}" required>

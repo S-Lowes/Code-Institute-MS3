@@ -10,6 +10,9 @@ The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to val
 
 1. []()
 
+    if session["user"] != recipe['created_by']:
+        return render_template("403.html")
+
 ##### CSS, Python, Javascript
 
 -   [W3C Markup Validator](https://validator.w3.org/) - [Results]()

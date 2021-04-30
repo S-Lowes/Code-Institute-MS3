@@ -270,9 +270,6 @@ def edit_recipe(id):
     """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(id)})
 
-    if session["user"] != recipe['created_by']:
-        return render_template("403.html")
-
     if request.method == "POST":
         edit = {
             "created_by": session["user"],
