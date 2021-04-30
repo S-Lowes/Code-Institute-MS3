@@ -58,23 +58,35 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 - Imagery
     - In keeping with the Narutomaki theme I used this in the logo and some icons. The images present on the website are those provided only by the users.
 - Wireframes
-    - I created wireframes for the basic ideas I had and then added more details as I went along.
-        - []()
-        - []()
-        - []()
-        - []()
+    - I created wireframes for the basic ideas. In the overall structure of the website persists from the wireframes to the complete project. However many of the pages now only vaguely resemble the final product.
+        - [Homepage](documentation/wireframes/wf_home.png))
+        - [My Recipes](documentation/wireframes/wf_myrecipes.png))
+        - [Create Recipe](documentation/wireframes/wf_create.png)
+        - [Cook Recipe](documentation/wireframes/wf_cook.png)
+        - [Login](documentation/wireframes/wf_login.png))
+        - [Register](documentation/wireframes/wf_register.png))
 
 ## Features
 
-- The website should be responsive across different devices.
 - The website allows the user to find and read recipes created by themselves or by other users.
+- The website is responsive across different devices.
+- Navigation bar is responsive and condenses into a icon on smaller devices.
+- Users recipes act in a similar way to a hero image in enticing users to the website.
+- It is easy to create recipes via the dynamic form.
+- The same form is used to edit the recipes making this is very simple.
+- Footer contains links to social media websites that open in a new tab.
+- Registration is simple and the acceptable formats for password and username is explained.
+- Confermation messages appear after completing actions such as registering, logging in, editing & creating a recipe.
 
 ### Taking The Project Further
 
-If I were taking the project further there are some features I believe would the website would benefit from:
-- Having a favorites section so users can favorite recipes created by themselves or other users.
-- More complete sharing system.
-- Possibly a comment section for recipes.
+Due to the nature of this project it feels like I could endlessly continue adding features. But If I were taking it further these are some features I believe would the website would benefit from:
+- I would want to take a closer look at how users navigate the creation form.
+- Allow users to delete particular form inputs rather than always the last one they added.
+- Allow users to add input fields at any point in the form (drag and drop)
+- A comment and liking system to encourage interactivity of users.
+- The website would benefit from a more compelete sharing system to social media. (share this recipe etc.)
+
 
 ## Technologies
 
@@ -87,7 +99,7 @@ If I were taking the project further there are some features I believe would the
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap4.5.2](https://getbootstrap.com/):
+1. [Bootstrap](https://getbootstrap.com/):
 
 1. [Gitpod](https://www.gitpod.io/):
 
