@@ -8,7 +8,7 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 
 ### New User Journey
 
-1. The user begins at the Homepage and is prompted to either register so they can create a recipe. 
+1. The user begins at the Homepage and is prompted to register so they can create a recipe. 
 1. Or they can take a look at 3 of the most recent recipes created by other users.
 
 ![Homepage](documentation/user_journey/uj_homepage.png)
@@ -30,7 +30,7 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 
 ![Creation](documentation/user_journey/uj_create.png)
 
-1. If the user wishes to either search for their own recipe or for one created by another user, they can do so from the search page. This is reached by clicking 'Search Recipes' in the navbar.
+1. If the user wishes to search for their own recipe or for one created by another user, they can do so from the search page. This is reached by clicking 'Search Recipes' in the navbar.
 
 ![Search](documentation/user_journey/uj_search.png)
 
@@ -51,13 +51,13 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 ### Design
 
 - Colour Scheme
-    - I decided to take inspiration from 'Narutomaki' which is a topping used on ramen. This led me towards a pink and white color scheme. I opted to also use a blue as it was one of the triadic colours from the pink I had sampled.
+    - I decided to take inspiration from 'Narutomaki' which is a topping used on ramen. This led me towards a pink and white color scheme. I opted also to use a blue as it was one of the triadic colours from the pink I had sampled.
 - Typography
     - I used Ubuntu and Fira Sans. These were chosen due to their softness which complimented the logo.
 - Imagery
     - In keeping with the Narutomaki theme I used this in the logo and some icons. The images present on the website are those provided only by the users.
 - Wireframes
-    - I created wireframes for the basic ideas. In the overall structure of the website persists from the wireframes to the complete project. However many of the pages now only vaguely resemble the final product.
+    - I created wireframes for the basic ideas. The overall structure of the website persists from the wireframes to the complete project. However many of the pages now only vaguely resemble the final product.
         - [Homepage](documentation/wireframes/wf_home.png)
         - [My Recipes](documentation/wireframes/wf_myrecipes.png)
         - [Create Recipe](documentation/wireframes/wf_create.png)
@@ -90,7 +90,7 @@ Due to the nature of this project it feels like I could endlessly continue addin
 - Allow users to delete particular form inputs rather than always the last one they added.
 - Allow users to add input fields at any point in the form (drag and drop)
 - A comment and liking system to encourage interactivity of users.
-- The website would benefit from a more compelete sharing system to social media. (share this recipe etc.)
+- The website would benefit from a more complete sharing system to social media. (share this recipe etc.)
 
 
 ## Technologies
