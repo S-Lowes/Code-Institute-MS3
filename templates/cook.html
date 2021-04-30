@@ -39,17 +39,13 @@
                     <li>
                         {{ step }}
                     </li>
-                    {% else %}
+                    {% endfor %}
                 </ol>
-                <p>
-                    No Instructions
-                </p>
-                {% endfor %}
             </div>
         </div>
     </div>
+    {% if recipe.created_by|lower == session["user"]|lower %}
     <div class="text-center">
-        {% if recipe.created_by|lower == session["user"]|lower %}
         <a href="{{ url_for('edit_recipe', id=recipe._id) }}">
             <img src="{{ url_for('static', filename='images/edit_button.png') }}" class="edit-button" alt="edit button">
         </a>
@@ -57,8 +53,8 @@
             <img src="{{ url_for('static', filename='images/delete_button.png') }}" class="delete-button"
                 alt="delete button">
         </a>
-        {% endif %}
     </div>
+    {% endif %}
 </div>
 
 {% endblock %}
