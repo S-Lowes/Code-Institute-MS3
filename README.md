@@ -86,7 +86,7 @@ MongoDB was used to host the database. Ingredients, Amount and Measure were orig
 ## Taking The Project Further (Additional Features)
 
 Due to the nature of this project it feels like I could endlessly continue adding features. But If I were taking it further these are some features I believe the webstie would benefit from:
-- I would want to take a closer look at how users navigate the creation form. (Tab)
+- I would want to take a closer look at how users navigate the creation form. (Using tab key)
 - Allow users to delete particular form inputs rather than always the last one they added.
 - Allow users to add input fields at any point in the form (drag and drop)
 - A comment and liking system to encourage interactivity of users.
