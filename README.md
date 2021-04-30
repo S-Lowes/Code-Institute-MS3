@@ -59,12 +59,12 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
     - In keeping with the Narutomaki theme I used this in the logo and some icons. The images present on the website are those provided only by the users.
 - Wireframes
     - I created wireframes for the basic ideas. In the overall structure of the website persists from the wireframes to the complete project. However many of the pages now only vaguely resemble the final product.
-        - [Homepage](documentation/wireframes/wf_home.png))
-        - [My Recipes](documentation/wireframes/wf_myrecipes.png))
+        - [Homepage](documentation/wireframes/wf_home.png)
+        - [My Recipes](documentation/wireframes/wf_myrecipes.png)
         - [Create Recipe](documentation/wireframes/wf_create.png)
         - [Cook Recipe](documentation/wireframes/wf_cook.png)
-        - [Login](documentation/wireframes/wf_login.png))
-        - [Register](documentation/wireframes/wf_register.png))
+        - [Login](documentation/wireframes/wf_login.png)
+        - [Register](documentation/wireframes/wf_register.png)
 
 ## Features
 
@@ -92,28 +92,54 @@ Due to the nature of this project it feels like I could endlessly continue addin
 
 ### Languages
 
-- [HTML5]()
-- [CSS3]()
-- [JS]()
-- [Python]()
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap](https://getbootstrap.com/):
+1. [Bootstrap](https://getbootstrap.com/)
 
-1. [Gitpod](https://www.gitpod.io/):
+1. [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
 
-1. [Github](https://github.com/):
+1. [MongoDB](https://www.mongodb.com/)
 
-1. [Google Fonts](https://fonts.google.com/?query=Oswa):
+1. [PyMongo](https://pymongo.readthedocs.io/en/stable/index.html)
 
-1. [Font Awesome](https://fontawesome.com/):
+1. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
 
-1. [Balsamiq](https://balsamiq.com/):
+1. [Heroku](https://en.wikipedia.org/wiki/Heroku)
+
+1. [Gitpod](https://www.gitpod.io/)
+
+1. [Git](https://git-scm.com/)
+
+1. [Github](https://github.com/)
+
+1. [Firefox Dev Tools](https://firefox-dev.tools/)
+
+1. [Google Fonts](https://fonts.google.com/?query=Oswa)
+
+1. [Font Awesome](https://fontawesome.com/)
+
+1. [Balsamiq](https://balsamiq.com/)
+
+1. [Favicon.cc](https://www.favicon.cc/)
+
+1. [TinyPNG](https://tinypng.com/)
+
+1. [Multi Media Mockup](https://techsini.com/multi-mockup/)
+
+1. [Adobe Spark](https://spark.adobe.com/sp)
 
 
 ## Testing 
 Testing information can be found here: [TESTING](TESTING.md)
+
 
 ## Deployment, Forking, Cloning
 
@@ -172,12 +198,6 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 //https://www.youtube.com/watch?v=MLBLsxcB3Dc
 
 The space to share any resources I have used to help me build this project.
-
-1. [Bootstrap4.5.2](https://getbootstrap.com/): Bootstrap Library used for some basic styling.
-
-1. [Favicon](https://www.favicon.cc/?): To create favicon.
-
-1. [Multi Media Mockup](https://techsini.com/multi-mockup/): For the README.
 
 ### Acknowledgements
 
