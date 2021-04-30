@@ -37,18 +37,14 @@
                 <h3 class="recipe-header">
                     Instructions
                 </h3>
-                <div class="decoration-line pb-5"></div>
+                <div class="decoration-line"></div>
                 <ol>
                     {% for step in recipe.instructions %}
                     <li>
                         {{ step }}
                     </li>
+                    {% else %}
                 </ol>
-                {% else %}
-                <p>
-                    No Instructions
-                </p>
-                {% endfor %}
             </div>
         </div>
     </div>
