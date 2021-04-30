@@ -23,7 +23,9 @@ a {
     text-decoration: none
 }
 
+
 /*===== NAVBAR =====*/
+
 .logo {
     width: 25rem;
 }
@@ -62,6 +64,7 @@ a {
     transform: scale(1.1);
 }
 
+
 /*===== HOMEPAGE =====*/
 
 .homepage-logo1 {
@@ -82,12 +85,16 @@ a {
     color: #e46ca9;
 }
 
+
 /*===== FORMS =====*/
+
 .card-form {
     margin: 2rem auto 1rem;
 }
 
+
 /*===== BUTTONS =====*/
+
 .btn-outline-dark {
     border-color: #e46ca9;
     color: #e46ca9;
@@ -118,7 +125,9 @@ a {
     color: #164776;
 }
 
+
 /*===== FLASH MESSAGES =====*/
+
 .flashes h4 {
     line-height: 2;
     text-align: center;
@@ -130,7 +139,9 @@ a {
     width: 25%;
 }
 
+
 /*===== SEARCH =====*/
+
 .search-card {
     width: 50%;
 }
@@ -139,7 +150,9 @@ a {
     color: #e46ca9;
 }
 
+
 /*===== RECIPE CARDS =====*/
+
 .card {
     margin: 1rem auto 1rem;
     background-color: #f8f9fa;
@@ -171,6 +184,7 @@ a {
     transform: scale(1.1);
 }
 
+
 /*===== READ RECIPE (cook.html) =====*/
 
 .image-creator-decription img {
@@ -191,7 +205,7 @@ a {
     flex: auto;
     height: 1px;
     border-bottom: 1px solid #e46ca9;
-    margin-left: calc(var(--bs-gutter-x)/ 2);
+    margin-left: 0.5rem;
 }
 
 .recipe-description {
@@ -204,7 +218,9 @@ a {
     font-size: 1.2rem;
 }
 
+
 /*===== LOGIN/REGISTER & RECIPES MISSING =====*/
+
 .form-section {
     min-height: 70vh;
 }
@@ -237,6 +253,7 @@ a {
     transform: scale(1.1);
 }
 
+
 /*===== FOOTER =====*/
 
 .footer {
@@ -246,7 +263,6 @@ a {
 .farewell-message {
     padding: 1rem;
 }
-
 
 .social-icon-div {
     padding: 0 0.5rem 1rem 0.5rem;
@@ -288,6 +304,7 @@ a {
     color: #164776;
 }
 
+
 /*===== FADE (Header & Footer) =====*/
 
 .fade_down {
@@ -297,9 +314,10 @@ a {
 
 .fade_up {
     height: 50px;
-    background-color: rgb(248, 249, 250, 0) !;
+    background-color: rgb(248, 249, 250, 0);
     background-image: linear-gradient(to top, rgb(108, 169, 228, 1), rgb(248, 249, 250, 0));
 }
+
 
 /*===== Median Screen Changes =====*/
 

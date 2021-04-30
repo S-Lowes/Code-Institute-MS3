@@ -1,5 +1,4 @@
 // ===== INGREDIENTS VARIABLES =====
-
 let ingredient = document.getElementById('ingredient');
 let measurement = document.getElementById('measurement');
 let amount = document.getElementById('amount');
@@ -16,15 +15,15 @@ let remove_step = document.getElementById('remove_step');
 
 add_more_ingredients.onclick = function () {
     let input1 = `<input type="text" class="form-control" name="ingredient"
-    id="ingredient" placeholder="What ingredient?" required="">`;
+        id="ingredient" placeholder="What ingredient?" required="">`;
     ingredient.insertAdjacentHTML("beforeend", input1);
 
     let input2 = `<input type="text" class="form-control" name="amount"
-    id="amount" placeholder="How Much?" required="">`;
+        id="amount" placeholder="How Much?" required="">`;
     amount.insertAdjacentHTML("beforeend", input2);
 
     let input3 = `<input type="text" class="form-control" name="measurement"
-    id="measurement" placeholder="What Measure?" required="">`;
+        id="measurement" placeholder="What Measure?" required="">`;
     measurement.insertAdjacentHTML("beforeend", input3);
 };
 
@@ -32,7 +31,8 @@ remove_ingredients.onclick = function () {
     let ingredient_tags = ingredient.getElementsByTagName('input');
     let amount_tags = amount.getElementsByTagName('input');
     let measurement_tags = measurement.getElementsByTagName('input');
-    if (ingredient_tags.length == 1 && measurement_tags.length == 1 && amount_tags.length == 1) {
+    if (ingredient_tags.length == 1 && measurement_tags.length == 1 &&
+        amount_tags.length == 1) {
 
     } else {
         ingredient.removeChild(ingredient_tags[(ingredient_tags.length) - 1]);
@@ -46,7 +46,7 @@ remove_ingredients.onclick = function () {
 add_step.onclick = function () {
 
     let input4 = `<textarea type="text" class="form-control" name="step"
-    id="step" placeholder="What do I do next?" required=""></textarea>`;
+        id="step" placeholder="What do I do next?" required=""></textarea>`;
     step.insertAdjacentHTML("beforeend", input4);
 };
 
