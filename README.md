@@ -1,4 +1,4 @@
-# MS3
+# MS3: View Live Project [Here](https://flask-yum-cook-book.herokuapp.com/)
 
 YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaScript, CSS, Bootstrap and HTML. It includes CRUD functionality (Create, Read, Update Delete) and is designed to be responsive across multiple devices. YUM allows the user to browse recipes created by other users aswell as creating their own.
 
@@ -23,7 +23,7 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 
 ![MyRecipes](documentation/user_journey/uj_myrecipes.png)
 
-1. If the user then decides to create a recipe they can click the create recipe tab in the navbar.
+1. If the user then decides to create a recipe they can click the create recipe tab in the navbar or the button on myrecipes.
 1. This brings them to the creation page. This Dynamic form allows the user to add ingredients and instructions dynamically.
 1. Once the recipe is created it will appear in their 'My Recipes' tab.
 1. They can edit and delete any recipe that they make.
@@ -44,7 +44,6 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
     - As a returning visitor I may be searching for the same recipe.
     - I have returned to register an account so that I can make create a recipe.
     - I may be logging in to create my own recipe.
-    - I just want to cook the meal I prepared last time I visited.
 - Frequent User
     - As a frequent user I would be looking to create multiple recipes.
     - I may also be searching through other users recipes to find inspiration or a recipe to cook.
@@ -78,10 +77,16 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 - Registration is simple and the acceptable formats for password and username is explained.
 - Confermation messages appear after completing actions such as registering, logging in, editing & creating a recipe.
 
-### Taking The Project Further
+## Data Schema
+
+![Data Scheme](documentation/images/db_diagram.png)
+
+MongoDB was used to host the database. Ingredients, Amount and measure were originally going to kept in the same array. However, after speaking with tutor support I was persuaded away from this. I combine these arrays with pythons Zip function and then display this within cook.html. I opted to use an image URL after receiving an email from Student Care suggesting I do so.
+
+## Taking The Project Further (Additional Features)
 
 Due to the nature of this project it feels like I could endlessly continue adding features. But If I were taking it further these are some features I believe would the website would benefit from:
-- I would want to take a closer look at how users navigate the creation form.
+- I would want to take a closer look at how users navigate the creation form. (Tab)
 - Allow users to delete particular form inputs rather than always the last one they added.
 - Allow users to add input fields at any point in the form (drag and drop)
 - A comment and liking system to encourage interactivity of users.
@@ -138,7 +143,7 @@ Due to the nature of this project it feels like I could endlessly continue addin
 
 1. [DBDiagram](https://dbdiagram.io/home)
 
-## Testing 
+## [TESTING](TESTING.md)
 Testing information can be found here: [TESTING](TESTING.md)
 
 
