@@ -59,7 +59,9 @@ After creating extra input elements with the dynamic form the HTML validator wil
 * Testuser created the recipe 'Testing User Journey.'
 * Testuser edited this same recipe changing the image via a new url.
 * Testuser edited further by adding a new ingredient and step to this test recipe.
+* Testuser then deleted the edited recipe recipe.
 * Testuser created and deleted a different recipe.
+
 
 ### Testing User Stories
 
