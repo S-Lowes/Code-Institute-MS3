@@ -16,15 +16,13 @@ The W3C Markup Validator, W3C CSS Validator, JSHint and PEP8Online services were
 1. [Create Recipe](documentation/html_validation/create.png)
 1. [Edit Recipe](documentation/html_validation/edit.png)
 
-
+After creating extra input elements with the dynamic form the HTML validator will display erros. This is due to these inputs sharing an ID which is necessaery when selecting them for deletion.
 
 ##### CSS, Python, Javascript
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](documentation/validation/css_valid.png)
 -   [JSHint](https://jshint.com/) - [Results](documentation/validation/jshint.png)
 -   [PEP8](http://pep8online.com/) - [Results](documentation/validation/pep8.png)
-
-Validator generates errors after creating extra input elements with the dynamic form. This is due to these inputs sharing an ID which is what is used to select them for deletion.
 
 #### Formatters
 
@@ -34,7 +32,7 @@ Validator generates errors after creating extra input elements with the dynamic 
 
 ### Testing User Journey
 1. The user begins at the Homepage and is prompted to either register so they can create a recipe. 
-    - User can see the brief description of the website at the homepage. This gently guides them towards registration
+    - User can see the brief description of the website at the homepage. This gently guides them towards registration.
 1. Or they can take a look at 3 of the most recent recipes created by other users.
     - These are visible just below the description of the website.
 1. Upon clicking 'Register' the user can then create an account.
@@ -60,6 +58,7 @@ Validator generates errors after creating extra input elements with the dynamic 
 * Testuser was created to explore the users journey.
 * Testuser created the recipe 'Testing User Journey.'
 * Testuser edited this same recipe changing the image via a new url.
+* Testuser edited further by adding a new ingredient and step.
 * Testuser created and deleted a different recipe.
 
 ### Testing User Stories

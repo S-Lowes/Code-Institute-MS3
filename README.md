@@ -70,22 +70,22 @@ YUM is a colourful recipe book website built with Python, Flask, MongoDB, JavaSc
 - The website allows the user to find and read recipes created by themselves or by other users.
 - The website is responsive across different devices.
 - Navigation bar is responsive and condenses into a icon on smaller devices.
-- Users recipes act in a similar way to a hero image in enticing users to the website.
+- User's recipes act in a similar way to a hero image in enticing users to the website.
 - It is easy to create recipes via the dynamic form.
-- The same form is used to edit the recipes making this is very simple.
+- The same form is used to edit the recipes making this very simple.
 - Footer contains links to social media websites that open in a new tab.
 - Registration is simple and the acceptable formats for password and username is explained.
-- Confermation messages appear after completing actions such as registering, logging in, editing & creating a recipe.
+- Confirmation messages appear after completing actions such as registering, logging in, editing & creating a recipe.
 
 ## Data Schema
 
 ![Data Scheme](documentation/images/db_diagram.png)
 
-MongoDB was used to host the database. Ingredients, Amount and measure were originally going to kept in the same array. However, after speaking with tutor support I was persuaded away from this. I combine these arrays with pythons Zip function and then display this within cook.html. I opted to use an image URL after receiving an email from Student Care suggesting I do so.
+MongoDB was used to host the database. Ingredients, Amount and Measure were originally going to kept in the same array. However, after speaking with tutor support I was persuaded away from this. I combine these arrays with pythons Zip function and then display this within cook.html. I opted to use an image URL after receiving an email from Student Care suggesting I do so.
 
 ## Taking The Project Further (Additional Features)
 
-Due to the nature of this project it feels like I could endlessly continue adding features. But If I were taking it further these are some features I believe would the website would benefit from:
+Due to the nature of this project it feels like I could endlessly continue adding features. But If I were taking it further these are some features I believe the webstie would benefit from:
 - I would want to take a closer look at how users navigate the creation form. (Tab)
 - Allow users to delete particular form inputs rather than always the last one they added.
 - Allow users to add input fields at any point in the form (drag and drop)
@@ -143,7 +143,9 @@ Due to the nature of this project it feels like I could endlessly continue addin
 
 1. [DBDiagram](https://dbdiagram.io/home)
 
+
 ## [TESTING](TESTING.md)
+
 Testing information can be found here: [TESTING](TESTING.md)
 
 
@@ -160,8 +162,8 @@ Testing information can be found here: [TESTING](TESTING.md)
 ##### Connect to GitHub Repository
 
 1. Click the deploy tab and select "GitHub - Connect to GitHub."
-1. Under the section "Search for a repository to connect to" enter the repository name in the designated box.
-1. Once the repo has been found, click the "Connect" button.
+1. Under the section "Search for a repository to connect to" enter the repository name in the box provided.
+1. Once the repository has been found, click the "Connect" button.
 
 ##### Setting Environment Variables
 
@@ -179,7 +181,7 @@ Click on the settings tab and then click "Reveal Config Vars" and add the follow
 
 ### Forking the GitHub Repository
 
-By forking the GitHub Repository we make a copy of the original repository on a GitHub account to view and/or make changes without affecting the original repository by using the following steps:
+By forking the GitHub Repository we are making a copy of the original repository on a GitHub account to view and/or make changes without affecting the original repository. This is done with the following steps:
 
 - Log in to [GitHub](https://github.com/) and locate the GitHub Repository.
 - At the top of the Repository just above the "Settings" button on the menu, locate the "Fork" button.
