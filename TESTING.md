@@ -4,9 +4,9 @@ The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to val
 
 #### Validators
 -   [W3C Markup Validator](https://validator.w3.org/) - [Results]()
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results]()
--   [JSHint](https://jshint.com/) - [Results](documentation/images/jshint.png)
--   [PEP8](https://jshint.com/) - [Results](documentation/images/pep8.png)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](documentation/validation/css_valid.png)
+-   [JSHint](https://jshint.com/) - [Results](documentation/validation/jshint.png)
+-   [PEP8](http://pep8online.com/) - [Results](documentation/validation/pep8.png)
 
 #### Formatters
 
