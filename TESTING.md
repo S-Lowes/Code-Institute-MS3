@@ -103,7 +103,7 @@ Validator generates errors after creating extra input elements with the dynamic 
 
 1. The UI is clear and concise.
     - I believe the UI is best on this screen size.
-    - This is especially true when scrolling with the sticky header and fixed footer when many recipes are added.
+    - This is especially true when scrolling across many recipes with the sticky header and fixed footer.
 1. Functionality.
     - All CRUD functionality is available.
     - Dynamic form is indeed dynamic and input field can be added or taken away.
@@ -150,6 +150,10 @@ The forms works and UI appears as designed.
 **Bug**: Validation of HTML caused an error with shared ID across HTML elements.
 
 **Bugfix**: This was fixed via some small edits to Javascript and HTML. (Although issue still would appear when creating multiple form elelements via the dynamic form)
+
+**Bug**: Jinja loop caused a validation error.
+
+**Bugfix**: This was fixed by getting rid of the unnecessary else statement.
 
 **Bug**: 403 error form was not displaying.
 
